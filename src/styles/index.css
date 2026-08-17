@@ -1,0 +1,115 @@
+.profile{
+	display: flex;
+	/*gap:30px;*/
+	align-items: center;
+	margin-top: 60px;
+		
+		justify-content: center;
+		/*margin-left: 300px;
+		margin-right: 300px;*/
+	}
+
+	.profile-image{
+		width:170px;
+		height: 170px;
+		border-radius: 50%;
+		object-fit: cover;
+		/**"No reduzcas esta imagen automáticamente cuando falte espacio." */
+		flex-shrink: 0;
+	}
+
+	.profile-info{
+		display: flex;
+		flex-direction: column;
+		margin-left: 80px;
+	}
+
+	.profile-info h1{
+		margin: 0;
+		/**cambia el tamaño de h1 a la par de la foto */
+		font-size:40px;
+		font-weight: 600;
+	}
+	.profile-info p{
+		margin:20px 0 12px;
+	}
+
+	.social-links{
+		display: flex;
+		align-items: center;
+		gap:15px;
+
+		color:var(--text);
+		/*text-decoration: none;*/
+	}
+	.social-links a{
+		display: inline-flex;
+		align-items: center;
+		gap:6px;
+		color:var(--text);
+		text-decoration: none;
+
+	}
+	.social-links svg{
+		fill:currentColor;
+	}
+
+	.social-links .instagram-icon {
+    fill: #E1306C;
+}
+	.social-links .gmail-icon,.github-icon{
+    fill: #000;
+}
+	.social-links .github-icon{
+    fill: #000;
+}
+.social-links a.github{
+    color: #000;
+}
+
+.social-links a.gmail{
+    color: #000;
+}
+
+.social-links .linkedin-icon {
+    fill: #0A66C2;
+}
+
+	.social-links a:hover{
+		opacity: 0.7;
+	}
+
+.social-links a.linkedin {
+    color: #0A66C2;
+}
+
+.social-links a.instagram{
+    color: #E1306C;
+}
+
+/**codigo css para la parte acerca de mi */
+.intro{
+	max-width: 750px;
+	line-height: 1.7;
+}
+.intro p{
+	margin: 0 0 20px;
+}
+.intro a{
+	color:var(--text);
+}
+
+.content-width{
+	width:min(750px, calc(100% - 40px));
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.professions {
+    margin: 0;
+}
+
+.separator {
+    margin: 0 10px;
+    font-size: 18px;
+}

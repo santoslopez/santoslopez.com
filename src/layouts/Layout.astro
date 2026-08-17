@@ -1,0 +1,143 @@
+---
+/** Astro.pons significa que nuesto Layout puede recibir información
+ * desde una página
+*/
+const {TITULO_PAGINA = "SANTOS LOPEZ" } = Astro.props;
+const paginaActual = Astro.url.pathname;
+const yearActual = new Date().getFullYear();
+import "../styles/index.css";
+import "../styles/layout.css";
+---
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>{TITULO_PAGINA}</title>
+    </head>
+
+    <body>
+        <nav>
+            <div class="container nav-container">
+                <a href="/" class="site-name">SANTOS LOPEZ</a>
+                <div class="nav-links">
+                    <a href="/" class:list={{ active: paginaActual ==="/"}}>
+                        Inicio
+                    </a>
+                    <a href="/blog" class:list={{ active:paginaActual ==="/blog"}}>
+                        Blog</a>
+                    <a href="/proyectos" class:list={{ active:paginaActual ==="/proyectos"}}>
+                        Proyectos</a>
+
+                    <button id="theme-toggle" aria-label="Cambiar tema">
+                        <svg
+    id="theme-icon"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+</svg>
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+        <!-- linea que va debajo del menu de navegacion, donde aparecen
+         los enlaces activos -->
+        <div class="nav-divider">
+        </div>
+       
+        <main>
+            <!-- "Aquí pon el contenido que me dé la página que está utilizando este Layout." 
+             
+            para eso se usa slot-->
+            <slot/>
+
+        </main>
+
+        <!-- linea que va debajo del menu de navegacion, donde aparecen
+         los enlaces activos -->
+        <div class="footer-divider" style="margin-top: 10vh;">
+        </div>
+        <!-- footer de la pagina -->
+        <footer>
+            <div class="container footer-container">
+                <span>© {yearActual} <a href="/">Santos López</a></span>
+                <a href="mailto:santos.lopez@galileo.edu">
+                    santos.lopez@galileo.edu
+                </a>
+            </div>
+        </footer>
+    </body>
+  
+
+
+    <script>
+        // as HTMLButtonElement para decirle que existe el button
+        const themeToggle = document.querySelector("#theme-toggle") as HTMLButtonElement;
+        const temaGuardado = localStorage.getItem("theme");
+
+        if (temaGuardado === "dark"){
+            document.documentElement.classList.add("dark");
+            
+        }
+
+function actualizarIcono(){
+    const temaOscuro = document.documentElement.classList.contains("dark");
+
+    themeToggle.innerHTML = temaOscuro
+        ? `
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="m4.93 4.93 1.41 1.41"/>
+                <path d="m17.66 17.66 1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+                <path d="m6.34 17.66-1.41 1.41"/>
+                <path d="m19.07 4.93-1.41 1.41"/>
+            </svg>
+        `
+        : `
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+            </svg>
+        `;
+}
+        actualizarIcono();
+        themeToggle.addEventListener("click", () => {
+            //document.documentElement.classList.toggle("dark");
+            const temaOscuro = document.documentElement.classList.toggle("dark");
+            localStorage.setItem("theme",temaOscuro ? "dark" : "light");
+            actualizarIcono();
+        });
+
+    </script>
+</html>
