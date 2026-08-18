@@ -113,3 +113,153 @@
     margin: 0 10px;
     font-size: 18px;
 }
+
+/* =========================================================
+   RESPONSIVE - PÁGINA PRINCIPAL
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .profile {
+        margin-top: 50px;
+    }
+
+    .profile-info {
+        margin-left: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 40px;
+
+        text-align: center;
+    }
+
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .profile-info {
+        width: 100%;
+
+        margin-left: 0;
+        margin-top: 24px;
+
+        align-items: center;
+    }
+
+
+    .profile-info h1 {
+        font-size: 32px;
+    }
+
+
+    .profile-info p {
+        margin: 16px 0 12px;
+    }
+
+
+    /*
+       Las profesiones permanecen en una sola línea.
+    */
+    .professions {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+
+    .separator {
+        margin: 0 5px;
+        font-size: 15px;
+    }
+
+
+    /*
+       Redes sociales debajo de las profesiones.
+    */
+    .social-links {
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .social-links a {
+        gap: 4px;
+    }
+
+
+    /*
+       Separación entre el perfil y "¡Hola!"
+    */
+    .intro {
+        margin-top: 45px;
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .profile {
+        margin-top: 30px;
+    }
+
+
+    .profile-image {
+        width: 135px;
+        height: 135px;
+    }
+
+
+    .profile-info {
+        margin-top: 20px;
+    }
+
+
+    .profile-info h1 {
+        font-size: 29px;
+    }
+
+
+    .professions {
+        font-size: 13px;
+    }
+
+    .separator {
+        margin: 0 3px;
+        font-size: 14px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+}
