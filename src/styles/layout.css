@@ -20,6 +20,9 @@
             color:var(--link);
             /**para quitar la raya azul en el nombre */
             text-decoration: none;
+            /*para hacer que el color sea un poco mas fuerte
+            en SANTOS LOPEZ a la par de los enlaces navegacion*/
+            font-weight: 600;
         }
 
         .nav-container{

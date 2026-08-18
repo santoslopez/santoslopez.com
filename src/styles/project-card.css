@@ -1,0 +1,37 @@
+.project {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.project-image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info h2 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.project-info p {
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+.project-info a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.project-info a:hover {
+    text-decoration: underline;
+}

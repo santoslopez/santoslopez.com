@@ -1,5 +1,45 @@
 ---
+/**necesario para respetar el cuerpo de la pagina index.
+ * donde va todo el contenido, que respeta el espacio entre
+ * lateral izquierda y derecha.
+ */
+import "../styles/index.css";
+import "../styles/project-card.css";
+
 import Layout from "../layouts/Layout.astro";
+
+import ProjectCard from "../components/ProjectCard.astro";
+
+const proyectos = [
+{
+        titulo: "Sistema de gestión académica",
+        descripcion:
+            "Sistema de gestión académica desarrollado con Java Swing y MySQL utilizando programación orientada a objetos y el patrón MVC.",
+        imagen: "https://santoslopez.me/assets/posts/sistema-gestion-academica/2.webp",
+        enlace: "https://github.com/santoslopez/sistema-gestion-academica"
+    },
+    {
+        titulo: "Comunicación entre Raspberry Pi Pico",
+        descripcion:
+            "Sistema de comunicación entre Raspberry Pi Pico mediante UART, desarrollado con Python, Flask y SQLite.",
+        imagen: "https://santoslopez.me/assets/posts/rpp-flask/diagrama-protoboard-raspberrys-uart.webp",
+        enlace: "https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart"
+    },
+    {
+        titulo: "Software para aprender idiomas",
+        descripcion:
+            "Plataforma educativa para el aprendizaje de idiomas utilizando gamificación.",
+        imagen: "https://santoslopez.me/assets/posts/perseverancia/15.webp",
+        enlace: "sdfdsfsdf"
+    },
+    {
+        titulo: "Software de control de inventario",
+        descripcion:
+            "Sistema para gestionar productos e inventario desarrollado con PHP y PostgreSQL.",
+        imagen: "https://camo.githubusercontent.com/e13715f593a4dc45892019e28b4d5324d44207d1cc839ce798235a0c9cf64a73/68747470733a2f2f73616e746f736c6f70657a2e6769746875622e696f2f6173736574732f706f7374732f736f6674776172652d696e76656e746172696f2f312e77656270",
+        enlace: "https://github.com/santoslopez/sistema-inventario-facturacion"
+    }
+];
 ---
 
 <Layout TITULO_PAGINA ="Proyectos">
@@ -9,6 +49,15 @@ import Layout from "../layouts/Layout.astro";
             Tengo una gran variedad de proyectos. Siendo algunos de código abierto
             que pueden ver en mi perfil de <a href="https://github.com/santoslopez">GitHub</a>.
         </p>
-        <p style="color:red">En construcción.</p>
+ {
+            proyectos.map((proyecto) => (
+                <ProjectCard
+                    titulo={proyecto.titulo}
+                    descripcion={proyecto.descripcion}
+                    imagen={proyecto.imagen}
+                    enlace={proyecto.enlace}
+                />
+            ))
+        }
     </section>
 </Layout>
