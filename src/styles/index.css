@@ -34,14 +34,16 @@
 		margin:20px 0 12px;
 	}
 
-	.social-links{
-		display: flex;
-		align-items: center;
-		gap:15px;
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-		color:var(--text);
-		/*text-decoration: none;*/
-	}
+    gap: 10px;
+
+    flex-wrap: nowrap;
+}
+	
 	.social-links a{
 		display: inline-flex;
 		align-items: center;
@@ -197,18 +199,15 @@
     /*
        Redes sociales debajo de las profesiones.
     */
+
     .social-links {
-        justify-content: center;
-        align-items: center;
-
-        gap: 12px;
-
-        flex-wrap: wrap;
+        gap: 10px;
+        flex-wrap: nowrap;
     }
-
 
     .social-links a {
         gap: 4px;
+        font-size: 14px;
     }
 
 
@@ -260,6 +259,10 @@
     }
 
     .social-links {
-        gap: 10px;
+        gap: 6px;
+    }
+
+    .social-links a {
+        font-size: 13px;
     }
 }
