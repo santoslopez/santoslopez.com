@@ -3,7 +3,9 @@
  * desde una página
 */
 const {TITULO_PAGINA = "SANTOS LOPEZ" } = Astro.props;
-const paginaActual = Astro.url.pathname;
+//const paginaActual = Astro.url.pathname;
+const paginaActual = Astro.url.pathname.replace(/\/$/, "") || "/";;
+
 const yearActual = new Date().getFullYear();
 /*import "../styles/index.css";*/
 import "../styles/layout.css";
