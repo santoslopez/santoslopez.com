@@ -21,9 +21,7 @@
             /**para quitar la raya azul en el nombre */
             text-decoration: none;
         }
-        .site-name:hover{
-    
-}
+
         .nav-container{
             /*con esto logramos que el nombre santoslopez
             se ponga lo mas a la izquierda de inicio*/
@@ -54,9 +52,9 @@
         .nav-links a.active{
             border-bottom: 1px solid;
         }
-        .nav-links a:hover{
+       /* .nav-links a:hover{
             text-decoration: underline;
-        }
+        }*/
 
        /**aspecto para navegacion claro o oscuro */
         #theme-toggle{
@@ -160,6 +158,8 @@
     }
 
     .nav-links a {
+        color: var(--link);
+        text-decoration: none;
         padding-bottom: 3px;
     }
 
