@@ -199,15 +199,16 @@
     /*
        Redes sociales debajo de las profesiones.
     */
-
-    .social-links {
-        gap: 10px;
+ .social-links {
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
         flex-wrap: nowrap;
     }
 
     .social-links a {
-        gap: 4px;
-        font-size: 14px;
+        gap: 3px;
+        font-size: 13px;
     }
 
 
@@ -259,10 +260,11 @@
     }
 
     .social-links {
-        gap: 6px;
+        gap: 4px;
     }
 
     .social-links a {
-        font-size: 13px;
+        gap: 2px;
+        font-size: 12px;
     }
 }
