@@ -35,3 +35,17 @@
 .project-info a:hover {
     text-decoration: underline;
 }
+
+
+/* =========================================================
+   RESPONSIVE - PROYECTOS
+   ========================================================= */
+
+@media (max-width: 600px) and (orientation: portrait) {
+
+    .project-image {
+        width: 150px;
+        height: 100px;
+    }
+
+}
