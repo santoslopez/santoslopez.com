@@ -1,0 +1,64 @@
+---
+import "../styles/index.css";
+import Layout from "../layouts/Layout.astro";
+const tecnologias = [
+    {
+        categoria: "Lenguajes",
+        items: ["Java","Python","PHP","JavaScript"]
+    },
+    {
+        categoria: "Web",
+        items: ["HTML","CSS","Astro"]
+    },
+    {
+        categoria:"Base de datos",
+        items:["MySQL","PostgreSQL","SQLite","SQL Server"]
+    },
+    {
+        categoria:"Herramientas",
+        items:["Git","GitHub"]
+    }
+];
+---
+
+<Layout TITULO_PAGINA ="Tecnologías">
+    <section class="intro content-width">
+        <h1>Tecnologías</h1>
+        <div class="technology-tabs">
+            {
+            tecnologias.map((tecnologia) =>(
+                <button data-categoria={tecnologia.categoria}
+                    data-items={tecnologia.items.join(",")}>
+                    {tecnologia.categoria}
+                    </button>
+            ))
+            }
+        </div>
+        <div class="technology-items"></div>
+        <p style="color:red">Actualmente en construcción.</p>
+    </section>
+</Layout>
+<script>
+import Tecnologias from "./tecnologias.astro";
+
+    const botones = document.querySelectorAll<HTMLButtonElement>(".technology-tabs button");
+    const technologyItems = document.querySelector(".technology-items");
+    botones.forEach((boton) => {
+        boton.addEventListener("click", () => {
+
+            const items = boton.dataset.items?.split(",");
+            
+            if(technologyItems){
+                technologyItems.innerHTML = "";
+                items?.forEach((item) =>{
+                    const elemento = document.createElement("span");
+                    elemento.textContent = item;
+                    technologyItems.appendChild(elemento);
+                })
+            }
+          
+        
+        });
+    }
+    )
+</script>
