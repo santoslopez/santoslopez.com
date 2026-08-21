@@ -4,11 +4,11 @@ import Layout from "../layouts/Layout.astro";
 const tecnologias = [
     {
         categoria: "Lenguajes",
-        items: ["Java","Python","PHP","JavaScript"]
+        items: ["C","Java","Python","PHP","JavaScript"]
     },
     {
         categoria: "Web",
-        items: ["HTML","CSS","Astro"]
+        items: ["HTML","CSS","Bootstrap","Astro"]
     },
     {
         categoria:"Base de datos",
@@ -30,7 +30,8 @@ const categoriaInicial = tecnologias[0];
             {
             tecnologias.map((tecnologia) =>(
                 <button data-categoria={tecnologia.categoria}
-                    data-items={tecnologia.items.join(",")}
+                    //data-items={tecnologia.items.join(",")}
+                    data-items={JSON.stringify(tecnologia.items)}
                     class:list={{ active: tecnologia === categoriaInicial}}>
                     {tecnologia.categoria}
                     </button>
@@ -64,11 +65,11 @@ const categoriaInicial = tecnologias[0];
 
             boton.classList.add("active");
 
-            const items = boton.dataset.items?.split(",");
-            
+            //const items = boton.dataset.items?.split(",");
+            const items = JSON.parse(boton.dataset.items ?? "[]") as string[];
             if(technologyItems){
                 technologyItems.innerHTML = "";
-                items?.forEach((item) =>{
+                items.forEach((item) =>{
                     const elemento = document.createElement("span");
                     elemento.textContent = item;
                     technologyItems.appendChild(elemento);
