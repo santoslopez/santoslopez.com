@@ -1,84 +1,95 @@
 ---
 import "../styles/index.css";
 import Layout from "../layouts/Layout.astro";
+
 const tecnologias = [
     {
         categoria: "Lenguajes",
-        items: ["C","Java","Python","PHP","JavaScript"]
+        items: ["C", "Java", "Python", "PHP", "JavaScript"]
     },
     {
         categoria: "Web",
-        items: ["HTML","CSS","Bootstrap","Astro"]
+        items: ["HTML", "CSS", "Bootstrap", "Astro"]
     },
     {
-        categoria:"Base de datos",
-        items:["MySQL","PostgreSQL","SQLite","SQL Server"]
+        categoria: "Base de datos",
+        items: ["MySQL", "PostgreSQL", "SQLite", "SQL Server"]
     },
     {
-        categoria:"Herramientas",
-        items:["Git","GitHub"]
+        categoria: "Herramientas",
+        items: ["Git", "GitHub"]
     }
 ];
-// array
+
+// Array
 const categoriaInicial = tecnologias[0];
 ---
 
-<Layout TITULO_PAGINA ="Tecnologías">
+<Layout TITULO_PAGINA="Tecnologías">
     <section class="intro content-width">
         <h1>Tecnologías</h1>
+
         <div class="technology-tabs">
             {
-            tecnologias.map((tecnologia) =>(
-                <button data-categoria={tecnologia.categoria}
-                    //data-items={tecnologia.items.join(",")}
-                    data-items={JSON.stringify(tecnologia.items)}
-                    class:list={{ active: tecnologia === categoriaInicial}}>
-                    {tecnologia.categoria}
+                tecnologias.map((tecnologia) => (
+                    <button
+                        data-categoria={tecnologia.categoria}
+                        data-items={JSON.stringify(tecnologia.items)}
+                        class:list={{ active: tecnologia === categoriaInicial }}
+                    >
+                        {tecnologia.categoria}
                     </button>
-            ))
+                ))
             }
         </div>
 
         <div class="technology-items">
             {
-                categoriaInicial.items.map((item)=>(
-                <span>{item}</span>
-            ))
+                categoriaInicial.items.map((item) => (
+                    <span>{item}</span>
+                ))
             }
         </div>
-        <!--p style="color:red">Actualmente en construcción.</p-->
+
+        <!-- <p style="color:red">Actualmente en construcción.</p> -->
     </section>
 </Layout>
-<script>
 
-    const botones = document.querySelectorAll<HTMLButtonElement>(".technology-tabs button");
+<script>
+    const botones = document.querySelectorAll<HTMLButtonElement>(
+        ".technology-tabs button"
+    );
 
     const technologyItems = document.querySelector(".technology-items");
 
     botones.forEach((boton) => {
         boton.addEventListener("click", () => {
 
-
-            botones.forEach((boton)=>{
+            botones.forEach((boton) => {
                 boton.classList.remove("active");
             });
 
             boton.classList.add("active");
 
-            //const items = boton.dataset.items?.split(",");
-            const items = JSON.parse(boton.dataset.items ?? "[]") as string[];
-            if(technologyItems){
+            const items = JSON.parse(
+                boton.dataset.items ?? "[]"
+            ) as string[];
+
+            if (technologyItems) {
                 technologyItems.innerHTML = "";
-                items.forEach((item) =>{
+
+                items.forEach((item) => {
                     const elemento = document.createElement("span");
+
                     elemento.textContent = item;
+
                     technologyItems.appendChild(elemento);
-                })
+                });
             }
         });
-    }
-    )
+    });
 </script>
+
 <style>
     .technology-tabs {
         display: flex;
@@ -125,7 +136,6 @@ const categoriaInicial = tecnologias[0];
         gap: 20px;
         margin-top: 20px;
     }
-
 
     /* =========================================================
        SCROLL HORIZONTAL
