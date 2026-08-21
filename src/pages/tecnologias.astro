@@ -19,6 +19,8 @@ const tecnologias = [
         items:["Git","GitHub"]
     }
 ];
+// array
+const categoriaInicial = tecnologias[0];
 ---
 
 <Layout TITULO_PAGINA ="Tecnologías">
@@ -28,23 +30,39 @@ const tecnologias = [
             {
             tecnologias.map((tecnologia) =>(
                 <button data-categoria={tecnologia.categoria}
-                    data-items={tecnologia.items.join(",")}>
+                    data-items={tecnologia.items.join(",")}
+                    class:list={{ active: tecnologia === categoriaInicial}}>
                     {tecnologia.categoria}
                     </button>
             ))
             }
         </div>
-        <div class="technology-items"></div>
-        <p style="color:red">Actualmente en construcción.</p>
+
+        <div class="technology-items">
+            {
+                categoriaInicial.items.map((item)=>(
+                <span>{item}</span>
+            ))
+            }
+        </div>
+        <!--p style="color:red">Actualmente en construcción.</p-->
     </section>
 </Layout>
 <script>
-import Tecnologias from "./tecnologias.astro";
 
     const botones = document.querySelectorAll<HTMLButtonElement>(".technology-tabs button");
+
     const technologyItems = document.querySelector(".technology-items");
+
     botones.forEach((boton) => {
         boton.addEventListener("click", () => {
+
+
+            botones.forEach((boton)=>{
+                boton.classList.remove("active");
+            });
+
+            boton.classList.add("active");
 
             const items = boton.dataset.items?.split(",");
             
@@ -56,9 +74,39 @@ import Tecnologias from "./tecnologias.astro";
                     technologyItems.appendChild(elemento);
                 })
             }
-          
-        
         });
     }
     )
 </script>
+<style>
+.technology-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+
+    background: rgba(128, 128, 128, 0.12);
+    border-radius: 6px;
+}
+
+.technology-tabs button {
+    border: none;
+    background: transparent;
+
+    color: var(--text);
+
+    padding: 6px 10px;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.technology-tabs button.active {
+    background: var(--background);
+}
+
+.technology-items {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+</style>
