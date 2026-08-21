@@ -5,20 +5,71 @@ import Layout from "../layouts/Layout.astro";
 const tecnologias = [
     {
         categoria: "Lenguajes",
-        items: ["C", "Java", "Python", "PHP", "JavaScript"]
+        items: [
+            { nombre: "C", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
+        {   nombre:"Java",
+            icono:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+        },
+{ nombre: "Python", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+{ nombre: "PHP", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" },
+{ nombre: "JavaScript", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" }
+    ]
     },
-    {
-        categoria: "Web",
-        items: ["HTML", "CSS", "Bootstrap", "Astro"]
-    },
-    {
-        categoria: "Base de datos",
-        items: ["MySQL", "PostgreSQL", "SQLite", "SQL Server"]
-    },
-    {
-        categoria: "Herramientas",
-        items: ["Git", "GitHub"]
-    }
+{
+    categoria: "Web",
+    items: [
+        {
+            nombre: "HTML",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        },
+        {
+            nombre: "CSS",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        },
+        {
+            nombre: "Bootstrap",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+        },
+        {
+            nombre: "Astro",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"
+        }
+    ]
+},
+{
+    categoria: "Base de datos",
+    items: [
+        {
+            nombre: "MySQL",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+        },
+        {
+            nombre: "PostgreSQL",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+        },
+        {
+            nombre: "SQLite",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
+        },
+        {
+            nombre: "SQL Server",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+        }
+    ]
+},
+{
+    categoria: "Herramientas",
+    items: [
+        {
+            nombre: "Git",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+        },
+        {
+            nombre: "GitHub",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+        }
+    ]
+}
 ];
 
 // Array
@@ -28,7 +79,7 @@ const categoriaInicial = tecnologias[0];
 <Layout TITULO_PAGINA="Tecnologías">
     <section class="intro content-width">
         <h1>Tecnologías</h1>
-
+        <p>Tecnologías con las que he trabajado en proyectos personales y académicos.</p>
         <div class="technology-tabs">
             {
                 tecnologias.map((tecnologia) => (
@@ -46,7 +97,10 @@ const categoriaInicial = tecnologias[0];
         <div class="technology-items">
             {
                 categoriaInicial.items.map((item) => (
-                    <span>{item}</span>
+                    <span>
+                        <img src={item.icono} alt="" width="30" height="30"/>
+                        {item.nombre}
+                    </span>
                 ))
             }
         </div>
@@ -73,7 +127,7 @@ const categoriaInicial = tecnologias[0];
 
             const items = JSON.parse(
                 boton.dataset.items ?? "[]"
-            ) as string[];
+            ) as {nombre: string; icono: string} [];
 
             if (technologyItems) {
                 technologyItems.innerHTML = "";
@@ -81,8 +135,14 @@ const categoriaInicial = tecnologias[0];
                 items.forEach((item) => {
                     const elemento = document.createElement("span");
 
-                    elemento.textContent = item;
+                    const icono = document.createElement("img");
+                    icono.src = item.icono;
+                    icono.alt = item.nombre;
+                    icono.width=18;
+                    icono.height = 18;
 
+                    elemento.appendChild(icono);
+                    elemento.append(item.nombre);
                     technologyItems.appendChild(elemento);
                 });
             }
