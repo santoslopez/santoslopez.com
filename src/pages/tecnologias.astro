@@ -81,32 +81,42 @@ const categoriaInicial = tecnologias[0];
 <style>
 .technology-tabs {
     display: flex;
-    gap: 4px;
+    gap: 2px;
     padding: 4px;
 
     background: rgba(128, 128, 128, 0.12);
     border-radius: 6px;
+
+    width: fit-content;
+
+    max-width: 100%;
+    overflow-x: auto;
 }
 
-.technology-tabs button {
-    border: none;
-    background: transparent;
+    .technology-tabs button {
+        border: none;
+        background: transparent;
 
-    color: var(--text);
+        color: var(--text);
 
-    padding: 6px 10px;
-    border-radius: 4px;
+        padding: 7px 12px;
+        border-radius: 4px;
 
-    cursor: pointer;
-}
+        cursor: pointer;
 
-.technology-tabs button.active {
-    background: var(--background);
-}
+        font-family: inherit;
+        font-size: 14px;
 
-.technology-items {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
+        transition: background-color 0.15s ease;
+    }
+
+    .technology-tabs button.active {
+        background: var(--background);
+    }
+
+    .technology-items {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
 </style>
