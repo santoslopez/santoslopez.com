@@ -111,6 +111,18 @@
 	max-width: 750px;
 	line-height: 1.7;
 }
+.intro h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.intro h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 40px 0 10px;
+}
+
 .intro p{
 	margin: 0 0 20px;
 }
