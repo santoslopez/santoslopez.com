@@ -1,0 +1,22 @@
+---
+const {
+    tituloCurso,
+    enlaceCurso,
+    descripcion,
+    expedicion,
+    imagen,
+    enlaceDiploma 
+} = Astro.props;
+--- 
+
+<article class="certification">
+    <img src={imagen} alt={tituloCurso} class="certification-image">
+    <div class="certification-info">
+        <a href={enlaceCurso}><h2>{tituloCurso}</h2></a>
+        <p>{descripcion}</p>
+        <p class="certification-date">{expedicion}</p>
+        <a href={enlaceDiploma} target="_blank" rel="noopener noreferrer" class="certification-button">
+            Ver certificación
+        </a>
+    </div>
+</article>

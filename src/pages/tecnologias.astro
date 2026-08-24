@@ -2,6 +2,11 @@
 import "../styles/index.css";
 import Layout from "../layouts/Layout.astro";
 
+import "../styles/certification-card.css";
+import CertificationCard from "../components/CertificationCard.astro";
+
+
+
 const tecnologias = [
     {
         categoria: "Lenguajes",
@@ -74,12 +79,103 @@ const tecnologias = [
 
 // Array
 const categoriaInicial = tecnologias[0];
+
+const certificaciones = [
+    {
+        tituloCurso: "SQL and Relational Databases 101",
+        enlaceCurso: "https://cognitiveclass.ai/courses/learn-sql-relational-databases",
+        descripcion: "Cognitive Class",
+        expedicion: "Expedición: 08 de febrero de 2025",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/cognitiveclass.webp",
+        enlaceDiploma: "https://courses.cognitiveclass.ai/certificates/ada49eed14c042b39e07f55979775db5?trk=public_profile_certification-title"
+    },
+        {
+        tituloCurso: "Java Intermediate",
+        enlaceCurso: "https://www.sololearn.com/es/learn/courses/java-intermediate",
+        descripcion: "Sololearn",
+        expedicion: "Expedición: 29 de diciembre de 2024",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/sololearn_icono.webp",
+        enlaceDiploma: "https://www.sololearn.com/es/certificates/CC-XT8IVKZS"
+    },
+            {
+        tituloCurso: "Introduction to Java",
+        enlaceCurso: "https://www.sololearn.com/en/learn/courses/java-introduction",
+        descripcion: "Sololearn",
+        expedicion: "Expedición: 21 de octubre de 2024",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/sololearn_icono.webp",
+        enlaceDiploma: "https://www.sololearn.com/en/certificates/CC-ZX1I7GFX"
+    },
+    {
+        tituloCurso: "Administrador de bases de datos relacionales",
+        enlaceCurso: "https://capacitateparaelempleo.org/cursos/view/100146",
+        descripcion: "Capacítate para el empleo",
+        expedicion: "Expedición: ago. 2024",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/capacitateEmpleo-logo.webp",
+        enlaceDiploma: "https://capacitateparaelempleo.org/verifica/6f2d4470-352c-405e-ab50-e73ab240bf37/b994366e-da85-4f23-8a27-424e02c1b864"
+    },
+    {
+        tituloCurso: "Administrador de bases de datos",
+        enlaceCurso: "https://capacitateparaelempleo.org/cursos/view/69",
+        descripcion: "Capacítate para el empleo",
+        expedicion: "Expedición: ago. 2024",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/capacitateEmpleo-logo.webp",
+        enlaceDiploma: "https://capacitateparaelempleo.org/verifica/6f2d4470-352c-405e-ab50-e73ab240bf37/ae53a96d-5e57-486b-b744-06756564a365"
+    },
+        {
+        tituloCurso: "Introduction to SQL",
+        enlaceCurso: "https://www.sololearn.com/en/learn/courses/sql-introduction",
+        descripcion: "Sololearn",
+        expedicion: "Expedición: 02 de agosto de 2023",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/sololearn_icono.webp",
+        enlaceDiploma: "https://www.sololearn.com/es/certificates/CC-CKDX7OOF"
+    },
+            {
+        tituloCurso: "Introduction to Python",
+        enlaceCurso: "https://www.sololearn.com/en/learn/courses/python-introduction",
+        descripcion: "Sololearn",
+        expedicion: "Expedición: 07 de junio de 2023",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/sololearn_icono.webp",
+        enlaceDiploma: "https://www.sololearn.com/es/certificates/CC-AANSYT8H"
+    },
+                {
+        tituloCurso: "Diseñador de Experiencia de usuario (UX)",
+        enlaceCurso: "https://capacitateparaelempleo.org/cursos/view/132",
+        descripcion: "Capacítate para el empleo",
+        expedicion: "Expedición: 13 de mayo de 2023",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/capacitateEmpleo-logo.webp",
+        enlaceDiploma: "https://capacitateparaelempleo.org/verifica/6f2d4470-352c-405e-ab50-e73ab240bf37/4938d4b0-cf4d-40f1-b5db-919e60dec7cb"
+    },
+    {
+        tituloCurso: "Building Web Applications in PHP",
+        enlaceCurso: "https://www.coursera.org/learn/web-applications-php/home/module/1",
+        descripcion: "University of Michigan",
+        expedicion: "Expedición: 28 de marzo de 2021",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/university-michigan.webp",
+        enlaceDiploma: "https://www.coursera.org/account/accomplishments/certificate/DKGTE98ZVYJF"
+    },
+            {
+        tituloCurso: "CS143 Compilers",
+        enlaceCurso: "https://online.stanford.edu/courses/soe-ycscs1-compilers",
+        descripcion: "Stanford Online",
+        expedicion: "Expedición: 28 de septiembre de 2017",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/stanford-university.webp",
+        enlaceDiploma: "https://prod-cert-bucket.s3.amazonaws.com/downloads/e0b37b8c3ef748eda66b4501da37cb09/Statement.pdf"
+    },
+            {
+        tituloCurso: "Introduction to HTML5",
+        enlaceCurso: "https://www.coursera.org/learn/web-applications-php/home/module/1",
+        descripcion: "University of Michigan",
+        expedicion: "Expedición: 19 de abril de 2017",
+        imagen: "https://santoslopez.me/assets/img/certificaciones/university-michigan.webp",
+        enlaceDiploma: "https://www.coursera.org/account/accomplishments/certificate/EB8CXDENBVDU"
+    },
+]
 ---
 
 <Layout TITULO_PAGINA="Tecnologías">
     <section class="intro content-width">
         <h1>Tecnologías</h1>
-        <p>Tecnologías con las que he trabajado en proyectos personales y académicos.</p>
+        <p>Tecnologías que utilizo.</p>
         <div class="technology-tabs">
             {
                 tecnologias.map((tecnologia) => (
@@ -104,7 +200,20 @@ const categoriaInicial = tecnologias[0];
                 ))
             }
         </div>
-
+        <h2>Formación y certificaciones</h2>
+        <p>Certificaciones obtenidas a través de formación en línea como parte de mi desarrollo profesional y personal.</p>
+        {
+    certificaciones.map((certificacion) => (
+        <CertificationCard 
+        tituloCurso={certificacion.tituloCurso}
+        enlaceCurso={certificacion.enlaceCurso}    
+        descripcion={certificacion.descripcion}
+            expedicion={certificacion.expedicion}
+            imagen={certificacion.imagen}
+            enlaceDiploma={certificacion.enlaceDiploma}
+            />
+    ))
+}
         <!-- <p style="color:red">Actualmente en construcción.</p> -->
     </section>
 </Layout>
