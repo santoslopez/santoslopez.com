@@ -5,5 +5,81 @@ import Layout from "../layouts/Layout.astro";
 <Layout TITULO_PAGINA="Contactar">
     <section class="intro content-width">
         <h1>Contactar</h1>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  <input type="hidden" name="access_key" value="36fa1a86-c8a5-4038-a86c-c54c5dfdd977">
+<label for="name">Nombre</label>
+  <input type="text" id="name" name="name" required>
+  <label for="email">Correo electrónico</label>
+  <input type="email" id="email" name="email" required>
+   <label for="message">Mensaje</label>
+  <textarea name="message" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
     </section>
 </Layout>
+
+<style>
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-width: 600px;
+        margin-top: 25px;
+    }
+
+    .contact-form label {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 10px 12px;
+
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+        background: var(--background);
+        color: var(--text);
+
+        font-family: inherit;
+        font-size: 15px;
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+        min-height: 140px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: var(--link);
+    }
+
+    .contact-form button {
+        align-self: flex-start;
+
+        margin-top: 12px;
+
+        padding: 9px 16px;
+
+        border: none;
+        border-radius: 5px;
+
+        background: var(--link);
+        color: white;
+
+        font-family: inherit;
+        font-size: 14px;
+
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        opacity: 0.9;
+    }
+</style>
