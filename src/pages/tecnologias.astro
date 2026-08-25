@@ -1,11 +1,8 @@
 ---
 import "../styles/index.css";
 import Layout from "../layouts/Layout.astro";
-
 import "../styles/certification-card.css";
 import CertificationCard from "../components/CertificationCard.astro";
-
-
 
 const tecnologias = [
     {
@@ -248,8 +245,8 @@ const certificaciones = [
                     const icono = document.createElement("img");
                     icono.src = item.icono;
                     icono.alt = item.nombre;
-                    icono.width=18;
-                    icono.height = 18;
+                    icono.width=30;
+                    icono.height = 30;
 
                     elemento.appendChild(icono);
                     elemento.append(item.nombre);
