@@ -17,6 +17,11 @@ import Layout from "../layouts/Layout.astro";
   <textarea name="message" required></textarea>
   <button type="submit">Enviar</button>
 </form>
+<p class="direct-email">
+    También puedes escribirme directamente a <a href="mailto:santos.lopez@galileo.edu">
+        santos.lopez@galileo.edu
+    </a>
+</p>
     </section>
 </Layout>
 
@@ -155,4 +160,17 @@ import Layout from "../layouts/Layout.astro";
         color: #842029;
         border: 1px solid #f5c2c7;
     }
+
+    .direct-email {
+    margin-top: 25px;
+    font-size: 14px;
+}
+.direct-email a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.direct-email a:hover {
+    text-decoration: underline;
+}
 </style>
