@@ -127,7 +127,12 @@
 	margin: 0 0 20px;
 }
 .intro a{
-	color:var(--text);
+	color:var(--link);
+     text-decoration: none;
+}
+
+.intro a:hover {
+    text-decoration: underline;
 }
 
 .content-width{
