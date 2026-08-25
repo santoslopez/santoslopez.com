@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout TITULO_PAGINA="Contactar">
     <section class="intro content-width">
         <h1>Contactar</h1>
+        <div id="resultado"></div>
         <!--form action="https://api.web3forms.com/submit" method="POST" class="contact-form"-->
         <form id="form" class="contact-form">
   <input type="hidden" name="access_key" value="36fa1a86-c8a5-4038-a86c-c54c5dfdd977">
@@ -15,7 +16,6 @@ import Layout from "../layouts/Layout.astro";
    <label for="message">Mensaje</label>
   <textarea name="message" required></textarea>
   <button type="submit">Enviar</button>
-  <div id="resultado"></div>
 </form>
     </section>
 </Layout>
@@ -24,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
 <!-- astro formulario -->
  <script>
     const form = document.getElementById("form") as HTMLFormElement;
-    const result = document.getElementById("resultado") as HTMLFormElement;
+    const result = document.getElementById("resultado") as HTMLElement;
 
     form.addEventListener("submit",async (e)=>{
         e.preventDefault();
@@ -50,7 +50,7 @@ import Layout from "../layouts/Layout.astro";
             setTimeout(() => {
                 result.innerHTML = "";
                 result.className = "";
-            },3000);
+            },4000);
 
         }else{
             result.className = "alert alert-error";
