@@ -28,12 +28,19 @@
 }
 
 .project-info a {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--link);
+    border-radius: 5px;
     color: var(--link);
     text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s ease;
 }
 
 .project-info a:hover {
-    text-decoration: underline;
+    background-color: var(--link);
+    color: var(--background);
 }
 
 
