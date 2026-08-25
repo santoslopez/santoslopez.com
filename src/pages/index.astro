@@ -3,10 +3,12 @@
 import "../styles/index.css";
 import Layout from "../layouts/Layout.astro";
 // importamos los svg de los iconos
-import GithubIcon from "../components/GitHubIcon.astro";
-import InstagramIcon from "../components/InstagramIcon.astro";
-import LinkedInIcon from "../components/LinkedInIcon.astro";
-import GmailIcon from "../components/GmailIcon.astro";
+import GithubIcon from "../components/icons/GitHubIcon.astro";
+
+import CvIcon from "../components/icons/CvIcon.astro";
+
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import GmailIcon from "../components/icons/GmailIcon.astro";
 ---
 
 <Layout TITULO_PAGINA ="Santos López">
@@ -38,13 +40,12 @@ import GmailIcon from "../components/GmailIcon.astro";
         Email
     </a>
 
-    <a href="https://vsco.co/santoslopez-"
+    <a href="/cv/cv-santoslopez-2026.pdf"
        aria-label="Instagram"
        class="social-button instagram"
        target="_blank"
        rel="noopener noreferrer">
-        <InstagramIcon/>
-        Instagram
+        <CvIcon/>
     </a>
 
     <a href="https://www.linkedin.com/in/lopezsantos"
