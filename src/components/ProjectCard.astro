@@ -1,4 +1,5 @@
 ---
+import GitHubIcon from "./icons/GitHubIcon.astro";
 const {
     titulo,
     descripcion,
@@ -13,6 +14,8 @@ const {
         <h2>{titulo}</h2>
         <p>{descripcion}</p>
         <a href={enlace} target="_blank" rel="noopener noreferrer">
+            
+            <GitHubIcon/>
             GitHub
         </a>
     </div>
