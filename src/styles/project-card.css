@@ -32,7 +32,8 @@
    BOTÓN GITHUB
    ========================================================= */
 
-.project-info a {
+.project-info a,
+.project-info button {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -45,9 +46,14 @@
     color: var(--text);
     text-decoration: none;
 
+    font-family: inherit;
     font-size: 14px;
 
     background: rgba(128, 128, 128, 0.08);
+}
+
+.project-info a {
+    cursor: pointer;
 
     transition:
         background-color 0.2s ease,
@@ -61,7 +67,23 @@
     opacity: 0.85;
 }
 
-.project-info a svg {
+
+/* =========================================================
+   GITHUB DESHABILITADO
+   ========================================================= */
+
+.project-info button.github-disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   ICONO GITHUB
+   ========================================================= */
+
+.project-info a svg,
+.project-info button svg {
     fill: currentColor;
 }
 

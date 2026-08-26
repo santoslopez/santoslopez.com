@@ -4,7 +4,8 @@ const {
     titulo,
     descripcion,
     imagen,
-    enlace
+    enlace,
+    mostrarEnlaceGitHub = true 
 } = Astro.props;
 ---
 
@@ -13,10 +14,19 @@ const {
     <div class="project-info">
         <h2>{titulo}</h2>
         <p>{descripcion}</p>
-        <a href={enlace} target="_blank" rel="noopener noreferrer">
-            
+        {
+            mostrarEnlaceGitHub ? (
+                <a href={enlace} target="_blank" rel="noopener noreferrer">
             <GitHubIcon/>
             GitHub
         </a>
+            ):( 
+        <button class="github-disabled" disabled>
+                    <GitHubIcon />
+                    Código privado
+                </button>
+            )
+        }
+      
     </div>
 </article>

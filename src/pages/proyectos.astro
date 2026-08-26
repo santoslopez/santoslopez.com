@@ -11,33 +11,37 @@ import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
 const proyectos = [
-{
-        titulo: "Sistema de gestión académica",
+    {
+        titulo: "Plataforma educativa gamificada para la preservación y aprendizaje de idiomas",
         descripcion:
-            "Sistema de gestión académica desarrollado con Java Swing y MySQL utilizando programación orientada a objetos y el patrón MVC.",
-        imagen: "https://santoslopez.me/assets/posts/sistema-gestion-academica/2.webp",
-        enlace: "https://github.com/santoslopez/sistema-gestion-academica"
+            "Plataforma educativa para el aprendizaje de idiomas utilizando gamificación.",
+        imagen: "https://santoslopez.me/assets/posts/perseverancia/15.webp",
+        enlace: "sdfdsfsdf",
+        mostrarEnlaceGitHub: false
     },
     {
         titulo: "Comunicación entre Raspberry Pi Pico",
         descripcion:
             "Sistema de comunicación entre Raspberry Pi Pico mediante UART, desarrollado con Python, Flask y SQLite.",
         imagen: "https://santoslopez.me/assets/posts/rpp-flask/diagrama-protoboard-raspberrys-uart.webp",
-        enlace: "https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart"
-    },
-    {
-        titulo: "Software para aprender idiomas",
-        descripcion:
-            "Plataforma educativa para el aprendizaje de idiomas utilizando gamificación.",
-        imagen: "https://santoslopez.me/assets/posts/perseverancia/15.webp",
-        enlace: "sdfdsfsdf"
+        enlace: "https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart",
+        mostrarEnlaceGitHub: true
     },
     {
         titulo: "Software de control de inventario",
         descripcion:
             "Sistema para gestionar productos e inventario desarrollado con PHP y PostgreSQL.",
         imagen: "https://camo.githubusercontent.com/e13715f593a4dc45892019e28b4d5324d44207d1cc839ce798235a0c9cf64a73/68747470733a2f2f73616e746f736c6f70657a2e6769746875622e696f2f6173736574732f706f7374732f736f6674776172652d696e76656e746172696f2f312e77656270",
-        enlace: "https://github.com/santoslopez/sistema-inventario-facturacion"
+        enlace: "https://github.com/santoslopez/sistema-inventario-facturacion",
+        mostrarEnlaceGitHub: true
+    },
+    {
+        titulo: "Sistema de gestión académica",
+        descripcion:
+            "Sistema de gestión académica desarrollado con Java Swing y MySQL utilizando programación orientada a objetos y el patrón MVC.",
+        imagen: "https://santoslopez.me/assets/posts/sistema-gestion-academica/2.webp",
+        enlace: "https://github.com/santoslopez/sistema-gestion-academica",
+        mostrarEnlaceGitHub: true
     }
 ];
 ---
@@ -56,6 +60,7 @@ const proyectos = [
                     descripcion={proyecto.descripcion}
                     imagen={proyecto.imagen}
                     enlace={proyecto.enlace}
+                    mostrarEnlaceGitHub={proyecto.mostrarEnlaceGitHub}
                 />
             ))
         }
