@@ -1,0 +1,34 @@
+---
+import { getCollection, render  } from "astro:content";
+
+// necesario para que respeta la estructura del diseño
+import "../../styles/index.css";
+
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths(){
+    const articulos = await getCollection("blog");
+    return articulos.map((articulo)=>({
+        params: {
+            slug: articulo.id
+        }
+    }
+
+    ));
+}
+
+const { slug } = Astro.params;
+const articulos = await getCollection("blog");
+const articulo = articulos.find((articulo)=> articulo.id === slug)!;
+
+const { Content } = await render(articulo);
+---
+<Layout TITULO_PAGINA={articulo.data.tituloTema}>
+   <article class="intro content-width">
+        <h1>{articulo?.data.tituloTema} </h1>
+        <Content />
+
+    </article>
+</Layout>
+
+

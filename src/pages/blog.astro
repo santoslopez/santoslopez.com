@@ -1,11 +1,30 @@
 ---
 import "../styles/index.css";
+import "../styles/blog-card.css";
 import Layout from "../layouts/Layout.astro";
+
+import BlogCard from "../components/BlogCard.astro";
+
+// obtener articulos de la coleccion blog 
+import { getCollection } from "astro:content";
+
+// Dame los contenidos que pertenecen a la colección blog.
+const articulos = await getCollection("blog");
 ---
 
 <Layout TITULO_PAGINA ="Blog">
     <section class="intro content-width">
         <h1>Blog</h1>
-        <p style="color:red">Actualmente en construcción.</p>
+        {
+            articulos.map((articulo)=>(
+                <BlogCard
+                    id={articulo.id}
+                    tituloTema={articulo.data.tituloTema}
+                    fechaPublicacion={articulo.data.fechaPublicacion}
+                    descripcionPrevia={articulo.data.descripcionPrevia}
+                    imagenPrevia={articulo.data.imagenPrevia}/>
+            ))
+        }
+
     </section>
 </Layout>
