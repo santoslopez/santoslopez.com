@@ -9,6 +9,9 @@ tituloTema: "Sistema de gestión académica en Java Swing y MySQL"
 fechaPublicacion: 2025-03-23
 descripcionPrevia: "..."
 imagenPrevia: "./img/sistema-gestion-academica/2.webp"
+enlace: "https://github.com/santoslopez/sistema-gestion-academica"
+mostrarEnlaceGitHub: true
+
 ---
 ## **Software para asignación horarios de estudiantes y profesores en universidades o colegios, etc.**
 El software se hizo para mejorar las habilidades de programación orientada a objetos y reforzar los conocientos en MySQL.

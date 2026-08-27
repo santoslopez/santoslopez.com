@@ -8,6 +8,9 @@ tituloTema: "Software para el control de inventario y facturación."
 fechaPublicacion: 2025-03-23
 descripcionPrevia: "..."
 imagenPrevia: "./img/software-inventario/5.webp"
+enlace: https://github.com/santoslopez/sistema-inventario-facturacion
+mostrarEnlaceGitHub: true
+
 ---
 
 Software para el control de inventario empresarial desarrollado con PHP como lenguaje de programación y PostgreSql como motor de base de datos relacional. Durante la implementación del proyecto se utilizaron diversas técnicas de seguridad, como transacciones en la base de datos para evitar pérdida de datos en caso de fallos (ROLLBACK), funciones de seguridad en sesiones, medidas anti-inyección SQL y scripts, encriptación de contraseñas, así como tecnologías web como Ajax, JavaScript, Bootstrap y CSS.

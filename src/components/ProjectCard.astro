@@ -3,24 +3,45 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 
 import { Image } from "astro:assets"; 
 
+
+
 const {
     id,
     tituloTema,
     fechaPublicacion,
     descripcionPrevia,
     imagenPrevia,
+    tecnologias = [],
     enlace,
-    mostrarEnlaceGitHub = true 
+    mostrarEnlaceGitHub
 } = Astro.props;
 ---
 <article class="project">
     <Image src={imagenPrevia} alt={tituloTema} class="project-image"/>
-    
+    <!--p>
+    mostrarEnlaceGitHub = {String(mostrarEnlaceGitHub)}
+</p-->
     <div class="project-info">
         <h2><a href={`/proyectos/${id}`}>{tituloTema}</a></h2>
          <p>{ fechaPublicacion}</p>           
 
-        <p>{descripcionPrevia}</p>
+        <p>Descripción previa: {descripcionPrevia}</p>
+        <p>Tecnologías: </p>
+
+{
+    tecnologias.length > 0 && (
+        <div class="project-technologies">
+            {
+                tecnologias.map((tecnologia: any) => (
+                    <span class="project-technology">
+                        <img src={tecnologia.icono} width="40" height="40"/>
+                    </span>
+                ))
+            }
+        </div>
+    )
+}
+
         {
             mostrarEnlaceGitHub ? (
                 <a href={enlace} target="_blank" rel="noopener noreferrer">

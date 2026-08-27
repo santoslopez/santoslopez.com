@@ -20,33 +20,46 @@ const proyectos = [
         descripcion:
             "Plataforma educativa para el aprendizaje de idiomas utilizando gamificación.",
         imagen: "https://santoslopez.me/img/perseverancia/15.webp",
+         tecnologias: [
+        {
+            nombre: "PHP",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+        },
+        {
+            nombre: "MySQL",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+        },
+        {
+            nombre: "JavaScript",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        }
+    ],
         enlace: "",
         mostrarEnlaceGitHub: false
     },
+
     {
-        titulo: "Comunicación entre Raspberry Pi Pico",
+        titulo: "Plataforma educativa gamificada para la preservación y aprendizaje de idiomas",
         descripcion:
-            "Sistema de comunicación entre Raspberry Pi Pico mediante UART, desarrollado con Python, Flask y SQLite.",
-        imagen: "https://santoslopez.me/img/rpp-flask/diagrama-protoboard-raspberrys-uart.webp",
-        enlace: "https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart",
-        mostrarEnlaceGitHub: true
+            "Plataforma educativa para el aprendizaje de idiomas utilizando gamificación.",
+        imagen: "https://santoslopez.me/img/perseverancia/15.webp",
+         tecnologias: [
+        {
+            nombre: "PHP",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+        },
+        {
+            nombre: "MySQL",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+        },
+        {
+            nombre: "JavaScript",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        }
+    ],
+        enlace: "",
+        mostrarEnlaceGitHub: false
     },
-    {
-        titulo: "Software de control de inventario",
-        descripcion:
-            "Sistema para gestionar productos e inventario desarrollado con PHP y PostgreSQL.",
-        imagen: "https://camo.githubusercontent.com/e13715f593a4dc45892019e28b4d5324d44207d1cc839ce798235a0c9cf64a73/68747470733a2f2f73616e746f736c6f70657a2e6769746875622e696f2f6173736574732f706f7374732f736f6674776172652d696e76656e746172696f2f312e77656270",
-        enlace: "https://github.com/santoslopez/sistema-inventario-facturacion",
-        mostrarEnlaceGitHub: true
-    },
-    {
-        titulo: "Sistema de gestión académica",
-        descripcion:
-            "Sistema de gestión académica desarrollado con Java Swing y MySQL utilizando programación orientada a objetos y el patrón MVC.",
-        imagen: "https://santoslopez.me/img/sistema-gestion-academica/2.webp",
-        enlace: "https://github.com/santoslopez/sistema-gestion-academica",
-        mostrarEnlaceGitHub: true
-    }
 ];
 ---
 
@@ -56,18 +69,20 @@ const proyectos = [
         <p>
             Encuentra más de mis proyectos en mi perfil de <a href="https://github.com/santoslopez">GitHub</a>.
         </p>
-        {
-            misProyectos.map((proyecto)=>(
-                <ProjectCard
-                id={proyecto.id}
-                tituloTema={proyecto.data.tituloTema}
-                fechaPublicacion={proyecto.data.fechaPublicacion}
-                descripcionPrevia={proyecto.data.descripcionPrevia}
-                imagenPrevia={proyecto.data.imagenPrevia}/>
-
-               
-            ))
-        }
+{
+    misProyectos.map((proyecto) => (
+        <ProjectCard
+            id={proyecto.id}
+            tituloTema={proyecto.data.tituloTema}
+            fechaPublicacion={proyecto.data.fechaPublicacion}
+            descripcionPrevia={proyecto.data.descripcionPrevia}
+            imagenPrevia={proyecto.data.imagenPrevia}
+            tecnologias={proyecto.data.tecnologias}
+            enlace={proyecto.data.enlace}
+            mostrarEnlaceGitHub={proyecto.data.mostrarEnlaceGitHub}
+        />
+    ))
+}
          <!--  
 {
             proyectos.map((proyecto) => (

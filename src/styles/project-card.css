@@ -1,9 +1,18 @@
+/* =========================================================
+   PROYECTO
+   ========================================================= */
+
 .project {
     display: flex;
     align-items: flex-start;
     gap: 15px;
     margin: 25px 0;
 }
+
+
+/* =========================================================
+   IMAGEN
+   ========================================================= */
 
 .project-image {
     width: 190px;
@@ -12,17 +21,23 @@
     flex-shrink: 0;
 }
 
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
 .project-info {
     flex: 1;
+    min-width: 0;
 }
 
 
 /* =========================================================
-   TÍTULO DEL PROYECTO
+   TÍTULO
    ========================================================= */
 
 .project-info h2 {
-    margin: 0 0 8px;
+    margin: 0 0 6px;
     font-size: 18px;
     font-weight: 500;
 }
@@ -38,7 +53,7 @@
 
 
 /* =========================================================
-   TEXTO
+   FECHA Y DESCRIPCIÓN
    ========================================================= */
 
 .project-info p {
@@ -46,9 +61,56 @@
     line-height: 1.6;
 }
 
+.project-date {
+    font-size: 14px;
+    opacity: 0.65;
+}
+
+.project-description {
+    line-height: 1.6;
+}
+
 
 /* =========================================================
-   BOTÓN GITHUB
+   TECNOLOGÍAS
+   ========================================================= */
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin: 12px 0;
+}
+
+
+/* =========================================================
+   TECNOLOGÍA INDIVIDUAL
+   ========================================================= */
+
+.project-technology {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 14px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ICONO DE TECNOLOGÍA
+   ========================================================= */
+
+.project-technology img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   GITHUB
    ========================================================= */
 
 .project-info > a,
@@ -73,10 +135,10 @@
 
 
 /* =========================================================
-   HOVER GITHUB
+   GITHUB ACTIVO
    ========================================================= */
 
-.project-info > a {
+.github-link {
     cursor: pointer;
 
     transition:
@@ -85,7 +147,7 @@
         opacity 0.2s ease;
 }
 
-.project-info > a:hover {
+.github-link:hover {
     background: rgba(128, 128, 128, 0.16);
     border-color: rgba(128, 128, 128, 0.35);
     opacity: 0.85;
@@ -113,14 +175,39 @@
 
 
 /* =========================================================
-   RESPONSIVE - PROYECTOS
+   RESPONSIVE
    ========================================================= */
 
 @media (max-width: 600px) and (orientation: portrait) {
 
+    .project {
+        gap: 12px;
+    }
+
     .project-image {
         width: 110px;
         height: 65px;
+    }
+
+    .project-info h2 {
+        font-size: 17px;
+    }
+
+    .project-info p {
+        font-size: 14px;
+    }
+
+    .project-technologies {
+        gap: 7px 10px;
+    }
+
+    .project-technology {
+        font-size: 13px;
+    }
+
+    .project-technology img {
+        width: 18px;
+        height: 18px;
     }
 
 }

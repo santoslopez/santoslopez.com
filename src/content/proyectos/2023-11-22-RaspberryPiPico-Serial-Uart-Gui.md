@@ -9,6 +9,9 @@ tituloTema: "Protocolo para envio y recepción de mensajes entre Raspberry Pi Pi
 fechaPublicacion: 2025-03-23
 descripcionPrevia: "..."
 imagenPrevia: "./img/rpp-flask/diagrama-protoboard-raspberrys-uart.webp"
+enlace: https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart
+mostrarEnlaceGitHub: true
+
 ---
 ## **Proyecto con Raspberry Pi Pico con comunicación serial UART y aplicación web**
 El proyecto tiene como objetivo establecer la comunicación entre dos Raspberry Pi Pico mediante el uso del servidor web Python Flask para el envío y recepción de mensajes. La comunicación se logra a través del protocolo serial UART. Se ha definido un formato específico para el envío y recepción de mensajes, permitiendo que ambas Raspberry Pi Pico determinen cuándo se envió el primer mensaje y cuándo la conexión se ha establecido con el otro microcontrolador.

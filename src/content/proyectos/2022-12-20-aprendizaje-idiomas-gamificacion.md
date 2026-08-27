@@ -2,7 +2,6 @@
 
 title: "Software para aprender idiomas utilizando gamificación"
 #permalink: /idiomas-mayas-guatemala-software
-permalink: /aprender-idiomas-con-gamificacion
 imagenPrincipal: /img/perseverancia/15.webp
 description: "Desarrollé desde cero un software educativo gamificado para el aprendizaje de idiomas mayas de Guatemala (sin embargo se adapta a cualquier idioma). La plataforma incluye desbloqueo progresivo de contenido, recompensas dinámicas y desafíos interactivos, maximizando la motivación de los usuarios. Ofrece una experiencia de aprendizaje efectiva y culturalmente enriquecedora."
 og_description: "Desarrollé desde cero un software educativo gamificado para el aprendizaje de idiomas mayas de Guatemala (sin embargo se adapta a cualquier idioma). La plataforma incluye desbloqueo progresivo de contenido, recompensas dinámicas y desafíos interactivos, maximizando la motivación de los usuarios. Ofrece una experiencia de aprendizaje efectiva y culturalmente enriquecedora."
@@ -10,6 +9,17 @@ tituloTema: "Software para aprender idiomas utilizando gamificación"
 fechaPublicacion: 2025-03-23
 descripcionPrevia: "..."
 imagenPrevia: "./img/perseverancia/15.webp"
+mostrarEnlaceGitHub: false
+tecnologias:
+  - nombre: "PHP"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+
+  - nombre: "MySQL"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+
+  - nombre: "JavaScript"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+enlace: ""
 ---
 ## **PERSEVERANCIA ¿Qué es perseverancia?**
 Es un software para el aprendizaje de idiomas mayas de Guatemala. Utiliza gamificación para tener a los estudiantes

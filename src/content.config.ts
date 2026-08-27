@@ -37,8 +37,17 @@ const proyectos = defineCollection({
         tituloTema: z.string(),
         fechaPublicacion: z.coerce.date(),
         descripcionPrevia: z.string(),
-        //imagenPrevia:z.string() FUNCIONA PARA TODAS LAS IMAGENES MARKDOWN
-        imagenPrevia:image()
+        imagenPrevia: image(),
+
+        tecnologias: z.array(
+            z.object({
+                nombre: z.string(),
+                icono: z.string()
+            })
+        ).default([]),
+
+        enlace: z.string().default(""),
+        mostrarEnlaceGitHub: z.boolean().default(true)
     }),
 });
 
