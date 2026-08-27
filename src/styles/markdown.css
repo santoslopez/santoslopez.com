@@ -1,5 +1,8 @@
 /*necesario para que las imagenes en los archivos markdown
 tengan cierto tamaño*/
+/* =========================================================
+   IMÁGENES DEL CONTENIDO MARKDOWN
+   ========================================================= */
 
 .markdown-content img {
     display: block;
@@ -18,7 +21,7 @@ tengan cierto tamaño*/
    CELULAR HORIZONTAL
    ========================================================= */
 
-@media (max-width: 600px) and (orientation: landscape) {
+@media (max-height: 600px) and (orientation: landscape) {
 
     .markdown-content img {
         width: 50%;
