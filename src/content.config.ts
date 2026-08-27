@@ -27,7 +27,23 @@ const blog = defineCollection({
     }),
 });
 
+const proyectos = defineCollection({
+    loader: glob({
+        base: "./src/content/proyectos",
+        pattern: "**/*.md",
+    }),
+
+    schema: ({image}) => z.object({
+        tituloTema: z.string(),
+        fechaPublicacion: z.coerce.date(),
+        descripcionPrevia: z.string(),
+        //imagenPrevia:z.string() FUNCIONA PARA TODAS LAS IMAGENES MARKDOWN
+        imagenPrevia:image()
+    }),
+});
+
 // hacer que astro reconozca la coleccion
 export const collections = {
     blog,
+    proyectos
 }

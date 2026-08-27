@@ -10,12 +10,16 @@ import Layout from "../layouts/Layout.astro";
 
 import ProjectCard from "../components/ProjectCard.astro";
 
+import { getCollection  } from "astro:content";
+
+const misProyectos = await getCollection("proyectos");
+
 const proyectos = [
     {
         titulo: "Plataforma educativa gamificada para la preservación y aprendizaje de idiomas",
         descripcion:
             "Plataforma educativa para el aprendizaje de idiomas utilizando gamificación.",
-        imagen: "https://santoslopez.me/assets/posts/perseverancia/15.webp",
+        imagen: "https://santoslopez.me/img/perseverancia/15.webp",
         enlace: "",
         mostrarEnlaceGitHub: false
     },
@@ -23,7 +27,7 @@ const proyectos = [
         titulo: "Comunicación entre Raspberry Pi Pico",
         descripcion:
             "Sistema de comunicación entre Raspberry Pi Pico mediante UART, desarrollado con Python, Flask y SQLite.",
-        imagen: "https://santoslopez.me/assets/posts/rpp-flask/diagrama-protoboard-raspberrys-uart.webp",
+        imagen: "https://santoslopez.me/img/rpp-flask/diagrama-protoboard-raspberrys-uart.webp",
         enlace: "https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart",
         mostrarEnlaceGitHub: true
     },
@@ -39,7 +43,7 @@ const proyectos = [
         titulo: "Sistema de gestión académica",
         descripcion:
             "Sistema de gestión académica desarrollado con Java Swing y MySQL utilizando programación orientada a objetos y el patrón MVC.",
-        imagen: "https://santoslopez.me/assets/posts/sistema-gestion-academica/2.webp",
+        imagen: "https://santoslopez.me/img/sistema-gestion-academica/2.webp",
         enlace: "https://github.com/santoslopez/sistema-gestion-academica",
         mostrarEnlaceGitHub: true
     }
@@ -52,7 +56,20 @@ const proyectos = [
         <p>
             Encuentra más de mis proyectos en mi perfil de <a href="https://github.com/santoslopez">GitHub</a>.
         </p>
- {
+        {
+            misProyectos.map((proyecto)=>(
+                <ProjectCard
+                id={proyecto.id}
+                tituloTema={proyecto.data.tituloTema}
+                fechaPublicacion={proyecto.data.fechaPublicacion}
+                descripcionPrevia={proyecto.data.descripcionPrevia}
+                imagenPrevia={proyecto.data.imagenPrevia}/>
+
+               
+            ))
+        }
+         <!--  
+{
             proyectos.map((proyecto) => (
                 <ProjectCard
                     titulo={proyecto.titulo}
@@ -63,5 +80,7 @@ const proyectos = [
                 />
             ))
         }
+-->
+        
     </section>
 </Layout>
