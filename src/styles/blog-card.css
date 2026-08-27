@@ -16,11 +16,30 @@
     flex: 1;
 }
 
+
+/* =========================================================
+   TÍTULO DEL ARTÍCULO
+   ========================================================= */
+
 .blog-info h2 {
     margin: 0 0 8px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
 }
+
+.blog-info h2 a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.blog-info h2 a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
 
 .blog-info p {
     margin: 0 0 8px;
@@ -40,10 +59,10 @@
 
 
 /* =========================================================
-   ENLACE DEL ARTÍCULO
+   BOTÓN "LEER MÁS"
    ========================================================= */
 
-.blog-info a {
+.blog-info > a {
     display: inline-flex;
     align-items: center;
 
@@ -68,7 +87,7 @@
         opacity 0.2s ease;
 }
 
-.blog-info a:hover {
+.blog-info > a:hover {
     background: rgba(128, 128, 128, 0.16);
     border-color: rgba(128, 128, 128, 0.35);
     opacity: 0.85;

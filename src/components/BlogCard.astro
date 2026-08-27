@@ -10,7 +10,9 @@ const {
 <article class="blog">
     <img src={imagenPrevia} alt={tituloTema} class="blog-image">
     <div class="blog-info">
-        <h2>{tituloTema}</h2>
+        <h2>
+            <a href={`/blog/${id}`}>{tituloTema}</a>
+        </h2>
         <p>{fechaPublicacion}</p>
         <p>{descripcionPrevia}</p>
         <a href={`/blog/${id}`}>Leer más</a>

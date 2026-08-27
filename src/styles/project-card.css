@@ -16,11 +16,30 @@
     flex: 1;
 }
 
+
+/* =========================================================
+   TÍTULO DEL PROYECTO
+   ========================================================= */
+
 .project-info h2 {
     margin: 0 0 8px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
 }
+
+.project-info h2 a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.project-info h2 a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
 
 .project-info p {
     margin: 0 0 8px;
@@ -32,8 +51,8 @@
    BOTÓN GITHUB
    ========================================================= */
 
-.project-info a,
-.project-info button {
+.project-info > a,
+.project-info > button {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -52,7 +71,12 @@
     background: rgba(128, 128, 128, 0.08);
 }
 
-.project-info a {
+
+/* =========================================================
+   HOVER GITHUB
+   ========================================================= */
+
+.project-info > a {
     cursor: pointer;
 
     transition:
@@ -61,7 +85,7 @@
         opacity 0.2s ease;
 }
 
-.project-info a:hover {
+.project-info > a:hover {
     background: rgba(128, 128, 128, 0.16);
     border-color: rgba(128, 128, 128, 0.35);
     opacity: 0.85;
@@ -72,7 +96,7 @@
    GITHUB DESHABILITADO
    ========================================================= */
 
-.project-info button.github-disabled {
+.project-info > button.github-disabled {
     opacity: 0.45;
     cursor: not-allowed;
 }
@@ -82,8 +106,8 @@
    ICONO GITHUB
    ========================================================= */
 
-.project-info a svg,
-.project-info button svg {
+.project-info > a svg,
+.project-info > button svg {
     fill: currentColor;
 }
 

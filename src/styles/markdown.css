@@ -1,0 +1,11 @@
+.markdown-content img {
+    display: block;
+
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+
+    margin: 25px auto;
+
+    border-radius: 6px;
+}
