@@ -48,7 +48,6 @@ La siguiente imagen muestra los botones para realizar compras, generar reporte d
 ### <code>Repositorio de GitHub</code>
 <div class="icon-text-wrapper">
     <a href="https://github.com/santoslopez/sistema-inventario-facturacion" class="enlacesSkills" title="Sistema inventario facturación">
-        {{ site.data.skills.github }}
         Código en GitHub
     </a>
 </div>

@@ -93,7 +93,6 @@ Para programar en la tarjeta de Raspberry Pi Pico se utilizo [Thonny Ide MicroPy
 {% if page.habilitarGithub==1 %}
 <div class="icon-text-wrapper">
     <a href="https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart" class="enlacesSkills" title="Perfil de GitHub">
-    {{ site.data.skills.github }}
     Código en GitHub
     </a>
 </div>
