@@ -21,7 +21,7 @@ tengan cierto tamaño*/
    CELULAR HORIZONTAL
    ========================================================= */
 
-@media (max-height: 600px) and (orientation: landscape) {
+@media (max-height: 600px) {
 
     .markdown-content img {
         width: 70%;
