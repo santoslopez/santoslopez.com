@@ -19,7 +19,7 @@ tengan cierto tamaño*/
 
 @media (max-width: 600px){
     .markdown-content img{
-        width: 90%;
-        max-width: 500px;
+        width: 100%;
+        max-width: 400px;
     }
 }
