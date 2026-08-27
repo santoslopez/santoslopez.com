@@ -1,4 +1,9 @@
 ---
+/**necesario para la imagen previa, por eso se uso image
+ * 
+ */
+
+ import { Image } from "astro:assets";
 const {
     id,
     tituloTema,
@@ -8,7 +13,7 @@ const {
 } = Astro.props;
 ---
 <article class="blog">
-    <img src={imagenPrevia} alt={tituloTema} class="blog-image">
+    <Image src={imagenPrevia} alt={tituloTema} class="blog-image"/>
     <div class="blog-info">
         <h2>
             <a href={`/blog/${id}`}>{tituloTema}</a>

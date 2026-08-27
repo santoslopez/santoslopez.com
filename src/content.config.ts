@@ -17,11 +17,13 @@ const blog = defineCollection({
 
     
     // espero recibir un objecto con determinados campos
-    schema: z.object({
+    schema: ({image }) => z.object({
         tituloTema: z.string(),
         fechaPublicacion: z.coerce.date(),
         descripcionPrevia: z.string(),
-        imagenPrevia:z.string()
+        //imagenPrevia:z.string() FUNCIONA PARA TODAS LAS IMAGENES MARKDOWN
+        imagenPrevia:image()
+
     }),
 });
 
