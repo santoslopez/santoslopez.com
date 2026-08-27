@@ -13,13 +13,15 @@ tengan cierto tamaño*/
     border-radius: 6px;
 }
 
+
 /* =========================================================
-   RESPONSIVE - CONTENIDO MARKDOWN
+   CELULAR HORIZONTAL
    ========================================================= */
 
-@media (max-width: 600px){
-    .markdown-content img{
-        width: 100%;
-        max-width: 400px;
+@media (max-width: 600px) and (orientation: landscape) {
+
+    .markdown-content img {
+        width: 50%;
     }
+
 }
