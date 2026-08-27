@@ -24,7 +24,7 @@ tengan cierto tamaño*/
 @media (max-height: 600px) and (orientation: landscape) {
 
     .markdown-content img {
-        width: 50%;
+        width: 70%;
     }
 
 }
