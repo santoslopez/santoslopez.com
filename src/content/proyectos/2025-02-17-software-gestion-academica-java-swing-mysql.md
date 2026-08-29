@@ -5,9 +5,9 @@ permalink: /software-gestion-academica-java-swing-mysql
 imagenPrincipal: ../img/sistema-gestion-academica/2.webp
 description: Sistema de gestión académica desarrollado en Java Swing y MySQL, utilizando los patrones MVC y POO. Este software de gestión escolar facilita la inscripción de estudiantes en cursos de colegios y universidades, permitiendo la asignación de cursos, horarios, salones y profesores. Además, cuenta con un sistema de roles para un control eficiente de usuarios y recursos educativos.
 og_description: Sistema de gestión académica desarrollado en Java Swing y MySQL, utilizando los patrones MVC y POO. Este software de gestión escolar facilita la inscripción de estudiantes en cursos de colegios y universidades, permitiendo la asignación de cursos, horarios, salones y profesores. Además, cuenta con un sistema de roles para un control eficiente de usuarios y recursos educativos.
-tituloTema: "Sistema de Gestión de Inventario y Ventas"
+tituloTema: Sistema de Gestión Académica
 fechaPublicacion: 2023-02-02
-descripcionPrevia: Sistema web para la gestión de inventario, compras y ventas, desarrollado con PHP y PostgreSQL. Implementa transacciones para mantener la integridad de los datos, control de existencias, anulación de ventas con actualización automática del inventario, gestión de clientes y proveedores, reportes y medidas de seguridad contra inyección SQL y manejo inseguro de sesiones.
+descripcionPrevia: Aplicación de escritorio para la gestión de estudiantes, profesores y cursos, con control de acceso basado en roles y persistencia de datos en MySQL.
 imagenPrevia: "./img/sistema-gestion-academica/2.webp"
 enlace: "https://github.com/santoslopez/sistema-gestion-academica"
 mostrarEnlaceGitHub: true
