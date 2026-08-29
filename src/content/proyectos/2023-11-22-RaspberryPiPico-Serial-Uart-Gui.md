@@ -5,12 +5,29 @@ permalink: /raspberry-pi-pico-serial-uart-gui
 imagenPrincipal: ../img/rpp-flask/diagrama-protoboard-raspberrys-uart.webp
 description: El objetivo del proyecto es establecer la comunicación entre dos Raspberry Pi Pico por medio del servidor web Python Flask para el envío y recepción de mensajes. La comunicación se logra por medio del protocolo serial UART. El almacenamiento de los mensajes (enviados y recibidos) quedan guardados en SQLite.
 og_description: El objetivo del proyecto es establecer la comunicación entre dos Raspberry Pi Pico por medio del servidor web Python Flask para el envío y recepción de mensajes. La comunicación se logra por medio del protocolo serial UART. El almacenamiento de los mensajes (enviados y recibidos) quedan guardados en SQLite.
-tituloTema: "Protocolo para envio y recepción de mensajes entre Raspberry Pi Pico con interfaz gráfica de usuario (Gui)"
-fechaPublicacion: 2025-03-23
-descripcionPrevia: "..."
+tituloTema: Interfaz de Comunicación UART para Raspberry Pi Pico
+fechaPublicacion: 2024-12-18
+descripcionPrevia: Sistema de comunicación bidireccional entre dos Raspberry Pi Pico mediante UART, con transmisión y recepción de mensajes y visualización en tiempo real desde una aplicación externa.
 imagenPrevia: "./img/rpp-flask/diagrama-protoboard-raspberrys-uart.webp"
 enlace: https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart
 mostrarEnlaceGitHub: true
+tecnologias:
+  - nombre: "Python"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+  - nombre: "Flask"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
+  - nombre: "SQLite"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
+  - nombre: "HTML5"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+  - nombre: "Bootstrap"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+  - nombre: "Raspberry Pi Pico"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg"
+  - nombre: "CSS3"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+  - nombre: "jQuery"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg"
 
 ---
 ## **Proyecto con Raspberry Pi Pico con comunicación serial UART y aplicación web**
@@ -93,11 +110,4 @@ Entre las Raspberry Pi Pico hay un convenio, el cuál es *mostrar el mensaje INI
 
 #### <code>¿Qué IDE utilizar para programar en MicroPython?</code>
 Para programar en la tarjeta de Raspberry Pi Pico se utilizo [Thonny Ide MicroPython](https://thonny.org) sin embargo es posible encontrar otras que puedan ser de su preferencia.
-{% if page.habilitarGithub==1 %}
-<div class="icon-text-wrapper">
-    <a href="https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart" class="enlacesSkills" title="Perfil de GitHub">
-    Código en GitHub
-    </a>
-</div>
-{% endif %}
 

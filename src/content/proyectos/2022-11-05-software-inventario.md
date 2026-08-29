@@ -4,12 +4,17 @@ title: "Software de control de inventario"
 permalink: /software-inventario-php-postgresql
 description: Software para el control de inventario y facturación.
 og_description: Software para el control de inventario y facturación.
-tituloTema: "Software para el control de inventario y facturación."
+tituloTema: "Sistema de Gestión de Inventario y Ventas"
 fechaPublicacion: 2025-03-23
-descripcionPrevia: "..."
+descripcionPrevia: "Sistema web para gestionar inventario, compras y ventas, con control de existencias e integridad transaccional."
 imagenPrevia: "./img/software-inventario/5.webp"
 enlace: https://github.com/santoslopez/sistema-inventario-facturacion
 mostrarEnlaceGitHub: true
+tecnologias:
+  - nombre: "Java"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+  - nombre: "MySQL"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
 
 ---
 

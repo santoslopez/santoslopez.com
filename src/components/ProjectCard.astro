@@ -1,9 +1,6 @@
 ---
 import GitHubIcon from "./icons/GitHubIcon.astro";
-
 import { Image } from "astro:assets"; 
-
-
 
 const {
     id,
@@ -18,18 +15,19 @@ const {
 ---
 <article class="project">
     <Image src={imagenPrevia} alt={tituloTema} class="project-image"/>
-    <!--p>
-    mostrarEnlaceGitHub = {String(mostrarEnlaceGitHub)}
-</p-->
     <div class="project-info">
         <h2><a href={`/proyectos/${id}`}>{tituloTema}</a></h2>
-         <p>{ fechaPublicacion}</p>           
-
-        <p>Descripción previa: {descripcionPrevia}</p>
-        <p>Tecnologías: </p>
-
-{
-    tecnologias.length > 0 && (
+         <p class="project-date">{ fechaPublicacion.toLocaleDateString("es-GT",
+            {
+                day: "2-digit",
+                month: "long",
+                year: "numeric"
+            }
+         )}</p>           
+        <p>{descripcionPrevia}</p>
+        <p><strong>Tecnologías:</strong></p>
+        {
+        tecnologias.length > 0 && (
         <div class="project-technologies">
             {
                 tecnologias.map((tecnologia: any) => (
@@ -39,9 +37,8 @@ const {
                 ))
             }
         </div>
-    )
-}
-
+        )
+        }
         {
             mostrarEnlaceGitHub ? (
                 <a href={enlace} target="_blank" rel="noopener noreferrer">

@@ -13,13 +13,18 @@ const {
 } = Astro.props;
 ---
 <article class="blog">
-    
     <Image src={imagenPrevia} alt={tituloTema} class="blog-image"/>
     <div class="blog-info">
         <h2>
             <a href={`/blog/${id}`}>{tituloTema}</a>
         </h2>
-        <p>{fechaPublicacion}</p>
+        <p class="blog-date">{fechaPublicacion.toLocaleDateString("es-GT",
+            {
+                day: "2-digit",
+                month: "long",
+                year: "numeric"
+            }
+        )}</p>
         <p>{descripcionPrevia}</p>
         <a href={`/blog/${id}`}>Leer más</a>
     </div>

@@ -5,18 +5,24 @@ title: "Software para aprender idiomas utilizando gamificación"
 imagenPrincipal: /img/perseverancia/15.webp
 description: "Desarrollé desde cero un software educativo gamificado para el aprendizaje de idiomas mayas de Guatemala (sin embargo se adapta a cualquier idioma). La plataforma incluye desbloqueo progresivo de contenido, recompensas dinámicas y desafíos interactivos, maximizando la motivación de los usuarios. Ofrece una experiencia de aprendizaje efectiva y culturalmente enriquecedora."
 og_description: "Desarrollé desde cero un software educativo gamificado para el aprendizaje de idiomas mayas de Guatemala (sin embargo se adapta a cualquier idioma). La plataforma incluye desbloqueo progresivo de contenido, recompensas dinámicas y desafíos interactivos, maximizando la motivación de los usuarios. Ofrece una experiencia de aprendizaje efectiva y culturalmente enriquecedora."
-tituloTema: "Software para aprender idiomas utilizando gamificación"
-fechaPublicacion: 2025-03-23
-descripcionPrevia: "..."
+tituloTema: "Perseverancia"
+fechaPublicacion: 2022-12-20
+descripcionPrevia: Plataforma web educativa para el aprendizaje de los idiomas Quiché y Kaqchikel mediante gamificación, con gestión de cursos, contenido interactivo, seguimiento del progreso y sistema de recompensas.
 imagenPrevia: "./img/perseverancia/15.webp"
 mostrarEnlaceGitHub: false
 tecnologias:
   - nombre: "PHP"
     icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
-
-  - nombre: "MySQL"
-    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-
+  - nombre: "PostgreSQL"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+  - nombre: "HTML5"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+  - nombre: "CSS3"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+  - nombre: "Bootstrap"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+  - nombre: "jQuery"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg"
   - nombre: "JavaScript"
     icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
 enlace: ""

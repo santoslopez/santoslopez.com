@@ -62,8 +62,8 @@
 }
 
 .project-date {
-    font-size: 14px;
-    opacity: 0.65;
+    opacity: 0.6;
+    font-size: 0.9rem;
 }
 
 .project-description {

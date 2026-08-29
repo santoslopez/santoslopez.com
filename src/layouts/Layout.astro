@@ -1,4 +1,6 @@
 ---
+
+
 /** Astro.pons significa que nuesto Layout puede recibir información
  * desde una página
 */
@@ -7,7 +9,8 @@ const {TITULO_PAGINA = "SANTOS LOPEZ" } = Astro.props;
 const paginaActual = Astro.url.pathname.replace(/\/$/, "") || "/";;
 
 const yearActual = new Date().getFullYear();
-/*import "../styles/index.css";*/
+
+import LunaIcon from "../components/icons/LunaIcon.astro";
 import "../styles/layout.css";
 ---
 <html lang="es">
@@ -40,20 +43,7 @@ import "../styles/layout.css";
                     <a href="/tecnologias" class:list={{ active:paginaActual ==="/tecnologias"}}>
                         Tecnologías</a>
                     <button id="theme-toggle" aria-label="Cambiar tema">
-                        <svg
-    id="theme-icon"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.8"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    aria-hidden="true"
-    >
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
-</svg>
+                        <LunaIcon/>
                     </button>
                 </div>
 
@@ -74,7 +64,7 @@ import "../styles/layout.css";
 
         <!-- linea que va debajo del menu de navegacion, donde aparecen
          los enlaces activos -->
-        <div class="footer-divider" style="margin-top: 10vh;">
+        <div class="footer-divider" style="margin-top: 10vh;background:rgb(255, 68, 0)">
         </div>
         <!-- footer de la pagina -->
         <footer>

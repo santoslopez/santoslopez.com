@@ -5,13 +5,17 @@ permalink: /software-gestion-academica-java-swing-mysql
 imagenPrincipal: ../img/sistema-gestion-academica/2.webp
 description: Sistema de gestión académica desarrollado en Java Swing y MySQL, utilizando los patrones MVC y POO. Este software de gestión escolar facilita la inscripción de estudiantes en cursos de colegios y universidades, permitiendo la asignación de cursos, horarios, salones y profesores. Además, cuenta con un sistema de roles para un control eficiente de usuarios y recursos educativos.
 og_description: Sistema de gestión académica desarrollado en Java Swing y MySQL, utilizando los patrones MVC y POO. Este software de gestión escolar facilita la inscripción de estudiantes en cursos de colegios y universidades, permitiendo la asignación de cursos, horarios, salones y profesores. Además, cuenta con un sistema de roles para un control eficiente de usuarios y recursos educativos.
-tituloTema: "Sistema de gestión académica en Java Swing y MySQL"
-fechaPublicacion: 2025-03-23
-descripcionPrevia: "..."
+tituloTema: "Sistema de Gestión de Inventario y Ventas"
+fechaPublicacion: 2023-02-02
+descripcionPrevia: Sistema web para la gestión de inventario, compras y ventas, desarrollado con PHP y PostgreSQL. Implementa transacciones para mantener la integridad de los datos, control de existencias, anulación de ventas con actualización automática del inventario, gestión de clientes y proveedores, reportes y medidas de seguridad contra inyección SQL y manejo inseguro de sesiones.
 imagenPrevia: "./img/sistema-gestion-academica/2.webp"
 enlace: "https://github.com/santoslopez/sistema-gestion-academica"
 mostrarEnlaceGitHub: true
-
+tecnologias:
+    - nombre: "Java"
+      icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+    - nombre: "MySQL"
+      icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
 ---
 ## **Software para asignación horarios de estudiantes y profesores en universidades o colegios, etc.**
 El software se hizo para mejorar las habilidades de programación orientada a objetos y reforzar los conocientos en MySQL.
