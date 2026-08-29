@@ -181,12 +181,19 @@
 @media (max-width: 600px) and (orientation: portrait) {
 
     .project {
-        gap: 12px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .project-image {
-        width: 110px;
-        height: 65px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .project-info {
+        width: 100%;
     }
 
     .project-info h2 {

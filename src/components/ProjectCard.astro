@@ -25,18 +25,22 @@ const {
             }
          )}</p>           
         <p>{descripcionPrevia}</p>
-        <p><strong>Tecnologías:</strong></p>
+        
         {
+           
         tecnologias.length > 0 && (
+            <>
+            <p><strong>Tecnologías:</strong></p>
         <div class="project-technologies">
             {
                 tecnologias.map((tecnologia: any) => (
                     <span class="project-technology">
-                        <img src={tecnologia.icono} width="40" height="40"/>
+                        <img src={tecnologia.icono} width="40" height="40" alt={tecnologia.tituloTema}/>
                     </span>
                 ))
             }
         </div>
+        </>
         )
         }
         {
