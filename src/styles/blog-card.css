@@ -101,9 +101,20 @@
 
 @media (max-width: 600px) and (orientation: portrait) {
 
+    .blog {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .blog-image {
-        width: 110px;
-        height: 65px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .blog-info {
+        width: 100%;
     }
 
 }
