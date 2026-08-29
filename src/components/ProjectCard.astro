@@ -43,18 +43,23 @@ const {
         </>
         )
         }
-        {
-            mostrarEnlaceGitHub ? (
-                <a href={enlace} target="_blank" rel="noopener noreferrer">
-            <GitHubIcon/>
-            GitHub
-        </a>
-            ):( 
-        <button class="github-disabled" disabled>
-                    <GitHubIcon />
-                    Código privado
-                </button>
-            )
-        }
+<div class="project-links">
+    {
+        mostrarEnlaceGitHub ? (
+            <a href={enlace} target="_blank" rel="noopener noreferrer">
+                <GitHubIcon/>
+                GitHub
+            </a>
+        ) : (
+            <button class="github-disabled" disabled>
+                <GitHubIcon />
+                Código privado
+            </button>
+        )
+    }
+
+    <a href={`/proyectos/${id}`}>Leer más</a>
+</div>
+        
     </div>
 </article>

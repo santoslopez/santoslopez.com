@@ -114,7 +114,9 @@
    ========================================================= */
 
 .project-info > a,
-.project-info > button {
+.project-info > button,
+.project-links > a,
+.project-links > button  {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -217,4 +219,12 @@
         height: 18px;
     }
 
+}
+
+/*necesario para que los botones aparezca uno a la par del otro, github
+y mas*/
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
