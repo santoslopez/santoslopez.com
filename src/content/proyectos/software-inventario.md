@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Software de control de inventario"
-permalink: /software-inventario-php-postgresql
+#permalink: /software-inventario-php-postgresql
 description: Software para el control de inventario y facturación.
 og_description: Software para el control de inventario y facturación.
 tituloTema: "Sistema de Gestión de Inventario y Ventas"
@@ -11,10 +11,20 @@ imagenPrevia: "./img/software-inventario/5.webp"
 enlace: https://github.com/santoslopez/sistema-inventario-facturacion
 mostrarEnlaceGitHub: true
 tecnologias:
-  - nombre: "Java"
-    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-  - nombre: "MySQL"
-    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+  - nombre: "PHP"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+  - nombre: "PostgreSQL"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+  - nombre: "HTML5"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+  - nombre: "CSS3"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+  - nombre: "Bootstrap"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+  - nombre: "jQuery"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg"
+  - nombre: "JavaScript"
+    icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
 
 ---
 

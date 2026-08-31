@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sistema de gestión académica en Java Swing y MySQL"
-permalink: /software-gestion-academica-java-swing-mysql
+#permalink: /software-gestion-academica-java-swing-mysql
 imagenPrincipal: ../img/sistema-gestion-academica/2.webp
 description: Sistema de gestión académica desarrollado en Java Swing y MySQL, utilizando los patrones MVC y POO. Este software de gestión escolar facilita la inscripción de estudiantes en cursos de colegios y universidades, permitiendo la asignación de cursos, horarios, salones y profesores. Además, cuenta con un sistema de roles para un control eficiente de usuarios y recursos educativos.
 og_description: Sistema de gestión académica desarrollado en Java Swing y MySQL, utilizando los patrones MVC y POO. Este software de gestión escolar facilita la inscripción de estudiantes en cursos de colegios y universidades, permitiendo la asignación de cursos, horarios, salones y profesores. Además, cuenta con un sistema de roles para un control eficiente de usuarios y recursos educativos.
