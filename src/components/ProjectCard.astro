@@ -17,13 +17,14 @@ const {
     <Image src={imagenPrevia} alt={tituloTema} class="project-image"/>
     <div class="project-info">
         <h2><a href={`/proyectos/${id}`}>{tituloTema}</a></h2>
-         <p class="project-date">{ fechaPublicacion.toLocaleDateString("es-GT",
+        <!-- EL CSS para la fecha de publicacion aun se conserva -->
+         <!--p class="project-date">{ fechaPublicacion.toLocaleDateString("es-GT",
             {
                 day: "2-digit",
                 month: "long",
                 year: "numeric"
             }
-         )}</p>           
+         )}</p-->           
         <p>{descripcionPrevia}</p>
         
         {
@@ -35,7 +36,7 @@ const {
             {
                 tecnologias.map((tecnologia: any) => (
                     <span class="project-technology">
-                        <img src={tecnologia.icono} width="40" height="40" alt={tecnologia.tituloTema}/>
+                        <img src={tecnologia.icono} alt={tituloTema}/>
                     </span>
                 ))
             }

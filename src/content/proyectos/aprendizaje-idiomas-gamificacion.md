@@ -6,7 +6,7 @@ imagenPrincipal: /img/perseverancia/15.webp
 description: "Desarrollé desde cero un software educativo gamificado para el aprendizaje de idiomas mayas de Guatemala (sin embargo se adapta a cualquier idioma). La plataforma incluye desbloqueo progresivo de contenido, recompensas dinámicas y desafíos interactivos, maximizando la motivación de los usuarios. Ofrece una experiencia de aprendizaje efectiva y culturalmente enriquecedora."
 og_description: "Desarrollé desde cero un software educativo gamificado para el aprendizaje de idiomas mayas de Guatemala (sin embargo se adapta a cualquier idioma). La plataforma incluye desbloqueo progresivo de contenido, recompensas dinámicas y desafíos interactivos, maximizando la motivación de los usuarios. Ofrece una experiencia de aprendizaje efectiva y culturalmente enriquecedora."
 tituloTema: "Perseverancia"
-fechaPublicacion: 2022-12-20
+fechaPublicacion: 2026-08-30
 descripcionPrevia: Plataforma web educativa para el aprendizaje de los idiomas Quiché y Kaqchikel mediante gamificación, con gestión de cursos, contenido interactivo, seguimiento del progreso y sistema de recompensas.
 imagenPrevia: "./img/perseverancia/15.webp"
 mostrarEnlaceGitHub: false

@@ -6,7 +6,7 @@ imagenPrincipal: ../img/rpp-flask/diagrama-protoboard-raspberrys-uart.webp
 description: El objetivo del proyecto es establecer la comunicación entre dos Raspberry Pi Pico por medio del servidor web Python Flask para el envío y recepción de mensajes. La comunicación se logra por medio del protocolo serial UART. El almacenamiento de los mensajes (enviados y recibidos) quedan guardados en SQLite.
 og_description: El objetivo del proyecto es establecer la comunicación entre dos Raspberry Pi Pico por medio del servidor web Python Flask para el envío y recepción de mensajes. La comunicación se logra por medio del protocolo serial UART. El almacenamiento de los mensajes (enviados y recibidos) quedan guardados en SQLite.
 tituloTema: Interfaz de Comunicación UART para Raspberry Pi Pico
-fechaPublicacion: 2024-12-18
+fechaPublicacion: 2026-06-06
 descripcionPrevia: Sistema de comunicación bidireccional entre dos Raspberry Pi Pico mediante UART, con transmisión y recepción de mensajes y visualización en tiempo real desde una aplicación externa.
 imagenPrevia: "./img/rpp-flask/diagrama-protoboard-raspberrys-uart.webp"
 enlace: https://github.com/santoslopez/RaspberryPiPico-Gui-Serial-Uart
