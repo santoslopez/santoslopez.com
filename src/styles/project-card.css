@@ -15,8 +15,8 @@
    ========================================================= */
 
 .project-image {
-    width: 190px;
-    height: 100px;
+    width: 250px;
+    height: auto;
     object-fit: cover;
     flex-shrink: 0;
 }
