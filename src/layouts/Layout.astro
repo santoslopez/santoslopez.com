@@ -5,6 +5,12 @@
  * desde una página
 */
 const {TITULO_PAGINA = "SANTOS LOPEZ" } = Astro.props;
+
+/** 
+ * meta description variable
+*/
+const { META_DESCRIPTION  =  " " } = Astro.props;
+
 //const paginaActual = Astro.url.pathname;
 const paginaActual = Astro.url.pathname.replace(/\/$/, "") || "/";;
 
@@ -15,15 +21,16 @@ import "../styles/layout.css";
 ---
 <html lang="es">
     <head>
+        <meta name="description" content={META_DESCRIPTION}>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width"/>
         <meta name="robots" content="index, follow"/>
         <meta name="googlebot" content="index, follow, max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
-    <meta name="author" content="Santos López"/>
-    <meta property="og:locale" content="es_ES"/>
-    <meta property="og:site_name" content="santoslopez.com">    
-    <meta property="og:type" content="website"/>
-     <meta property="og:url" content="https://santoslopez.com"/>
+        <meta name="author" content="Santos López"/>
+        <meta property="og:locale" content="es_ES"/>
+        <meta property="og:site_name" content="santoslopez.com">    
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://santoslopez.com"/>
         <title>{TITULO_PAGINA}</title>
 
     </head>

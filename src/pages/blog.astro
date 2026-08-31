@@ -12,7 +12,9 @@ import { getCollection } from "astro:content";
 const articulos = await getCollection("blog");
 ---
 
-<Layout TITULO_PAGINA ="Blog">
+<Layout TITULO_PAGINA ="Blog"
+META_DESCRIPTION="Artículos de Santos López sobre desarrollo de software, programación, tecnología y proyectos personales, donde comparte conocimientos, experiencias y aprendizajes."
+>
     <section class="intro content-width">
         <h1>Blog</h1>
         {
