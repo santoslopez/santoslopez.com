@@ -108,9 +108,14 @@
 
 /**codigo css para la parte acerca de mi */
 .intro{
-	max-width: 750px;
+	/*max-width: 750px;*/
 	line-height: 1.7;
 }
+
+.intro > * {
+    max-width: 790px;
+}
+
 .intro h1 {
     font-size: 32px;
     font-weight: 600;
@@ -135,8 +140,10 @@
     text-decoration: underline;
 }
 
+/*aqui le cambiamos el ancho donde esta hola para que quede alineado
+con el nombre SANTOSLOPEZ el primer texto que aparece mas arriba de los nav*/
 .content-width{
-	width:min(750px, calc(100% - 40px));
+	width:min(900px, calc(100% - 40px));
 	margin-left: auto;
 	margin-right: auto;
 }
