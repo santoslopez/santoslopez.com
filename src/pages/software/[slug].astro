@@ -8,7 +8,7 @@ import "../../styles/markdown.css";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths(){
-    const articulos = await getCollection("proyectos");
+    const articulos = await getCollection("software");
     return articulos.map((articulo)=>({
         params: {
             slug: articulo.id
@@ -19,7 +19,7 @@ export async function getStaticPaths(){
 }
 
 const { slug } = Astro.params;
-const articulos = await getCollection("proyectos");
+const articulos = await getCollection("software");
 const articulo = articulos.find((articulo)=> articulo.id === slug)!;
 
 const { Content } = await render(articulo);

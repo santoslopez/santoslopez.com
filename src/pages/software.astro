@@ -8,11 +8,11 @@ import "../styles/project-card.css";
 
 import Layout from "../layouts/Layout.astro";
 
-import ProjectCard from "../components/ProjectCard.astro";
+import Software from "../components/SoftwareCard.astro";
 
 import { getCollection  } from "astro:content";
 
-const misProyectos = await getCollection("proyectos");
+const misProyectos = await getCollection("software");
 
 /**
  * necesario para ordener los archivos markdown por 
@@ -84,7 +84,7 @@ const proyectos = [
         </p>
 {
     misProyectos.map((proyecto) => (
-        <ProjectCard
+        <Software
             id={proyecto.id}
             tituloTema={proyecto.data.tituloTema}
             fechaPublicacion={proyecto.data.fechaPublicacion}
@@ -99,7 +99,7 @@ const proyectos = [
          <!--  
 {
             proyectos.map((proyecto) => (
-                <ProjectCard
+                <Software
                     titulo={proyecto.titulo}
                     descripcion={proyecto.descripcion}
                     imagen={proyecto.imagen}

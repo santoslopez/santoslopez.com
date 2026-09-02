@@ -27,9 +27,9 @@ const blog = defineCollection({
     }),
 });
 
-const proyectos = defineCollection({
+const software = defineCollection({
     loader: glob({
-        base: "./src/content/proyectos",
+        base: "./src/content/software",
         pattern: "**/*.md",
     }),
 
@@ -54,5 +54,5 @@ const proyectos = defineCollection({
 // hacer que astro reconozca la coleccion
 export const collections = {
     blog,
-    proyectos
+    software
 }
