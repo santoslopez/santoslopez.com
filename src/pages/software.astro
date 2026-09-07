@@ -1,0 +1,114 @@
+---
+/**necesario para respetar el cuerpo de la pagina index.
+ * donde va todo el contenido, que respeta el espacio entre
+ * lateral izquierda y derecha.
+ */
+import "../styles/index.css";
+import "../styles/project-card.css";
+
+import Layout from "../layouts/Layout.astro";
+
+import Software from "../components/SoftwareCard.astro";
+
+import { getCollection  } from "astro:content";
+
+const misProyectos = await getCollection("software");
+
+/**
+ * necesario para ordener los archivos markdown por 
+ * fechaPublicacion, por la fecha mas reciente
+ */
+misProyectos.sort(
+    (a,b) =>
+        b.data.fechaPublicacion.getTime()-
+        a.data.fechaPublicacion.getTime()
+);
+
+/*
+const proyectos = [
+    {
+        titulo: "Plataforma educativa gamificada para la preservación y aprendizaje de idiomas",
+        descripcion:
+            "Plataforma educativa para el aprendizaje de idiomas utilizando gamificación.",
+        imagen: "https://santoslopez.me/img/perseverancia/15.webp",
+         tecnologias: [
+        {
+            nombre: "PHP",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+        },
+        {
+            nombre: "MySQL",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+        },
+        {
+            nombre: "JavaScript",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        }
+    ],
+        enlace: "",
+        mostrarEnlaceGitHub: false
+    },
+
+    {
+        titulo: "Plataforma educativa gamificada para la preservación y aprendizaje de idiomas",
+        descripcion:
+            "Plataforma educativa para el aprendizaje de idiomas utilizando gamificación.",
+        imagen: "https://santoslopez.me/img/perseverancia/15.webp",
+         tecnologias: [
+        {
+            nombre: "PHP",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+        },
+        {
+            nombre: "MySQL",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+        },
+        {
+            nombre: "JavaScript",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        }
+    ],
+        enlace: "",
+        mostrarEnlaceGitHub: false
+    },
+];*/
+---
+
+<Layout TITULO_PAGINA ="Proyectos"
+    META_DESCRIPTION="Explora los proyectos de software de Santos López, incluyendo aplicaciones web, sistemas de gestión y soluciones desarrolladas con tecnologías como Java, PHP, Python, MySQL, PostgreSQL, etc."
+>
+    <section class="intro content-width">
+        <h1>Proyectos</h1>
+        <p>
+            Puedes encontrar más de mis proyectos de software en <a href="https://github.com/santoslopez">GitHub</a>.
+        </p>
+{
+    misProyectos.map((proyecto) => (
+        <Software
+            id={proyecto.id}
+            tituloTema={proyecto.data.tituloTema}
+            fechaPublicacion={proyecto.data.fechaPublicacion}
+            descripcionPrevia={proyecto.data.descripcionPrevia}
+            imagenPrevia={proyecto.data.imagenPrevia}
+            tecnologias={proyecto.data.tecnologias}
+            enlace={proyecto.data.enlace}
+            mostrarEnlaceGitHub={proyecto.data.mostrarEnlaceGitHub}
+        />
+    ))
+}
+         <!--  
+{
+            proyectos.map((proyecto) => (
+                <Software
+                    titulo={proyecto.titulo}
+                    descripcion={proyecto.descripcion}
+                    imagen={proyecto.imagen}
+                    enlace={proyecto.enlace}
+                    mostrarEnlaceGitHub={proyecto.mostrarEnlaceGitHub}
+                />
+            ))
+        }
+-->
+        
+    </section>
+</Layout>

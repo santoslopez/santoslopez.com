@@ -1,0 +1,122 @@
+.blog {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.blog-image {
+    /*width: 190px
+    height: 100px;*/
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.blog-info {
+    flex: 1;
+}
+
+
+/* =========================================================
+   TÍTULO DEL ARTÍCULO
+   ========================================================= */
+
+.blog-info h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.blog-info h2 a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.blog-info h2 a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.blog-info p {
+    margin: 0 0 8px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FECHA
+   ========================================================= */
+
+.blog-date {
+  
+    opacity: 0.6;
+    font-size: 0.9rem;
+   
+}
+
+
+/* =========================================================
+   BOTÓN "LEER MÁS"
+   ========================================================= */
+
+.blog-info > a {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 6px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    background: rgba(128, 128, 128, 0.08);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.blog-info > a:hover {
+    background: rgba(128, 128, 128, 0.16);
+    border-color: rgba(128, 128, 128, 0.35);
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   RESPONSIVE - BLOG
+   ========================================================= */
+
+@media (max-width: 600px) and (orientation: portrait) {
+
+    .blog {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .blog-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .blog-info {
+        width: 100%;
+    }
+
+}

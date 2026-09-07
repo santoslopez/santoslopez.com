@@ -1,0 +1,91 @@
+---
+/**es el archivo que tiene el index.css que se usa en index.astro */
+import "../styles/index.css";
+import Layout from "../layouts/Layout.astro";
+// importamos los svg de los iconos
+import GithubIcon from "../components/icons/GitHubIcon.astro";
+
+import CvIcon from "../components/icons/CvIcon.astro";
+
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import GmailIcon from "../components/icons/GmailIcon.astro";
+---
+
+<Layout TITULO_PAGINA ="Santos López"
+META_DESCRIPTION="Santos López, profesional de tecnología con pasión por el desarrollo de software. Explora mis proyectos, tecnologías y formación en Ingeniería de Sistemas Informática y Ciencias de Computación y Maestría en Tecnologías de la Información.">
+
+	<section class="profile content-width">
+		<img src="/santoslopez.webp" alt="Santos López" class="profile-image">
+		<div class="profile-info">
+			<h1>SANTOS LÓPEZ</h1>
+			<p class="professions">
+				<span class="separator">•</span>
+				Software Developer
+    <!--span class="separator">•</span>
+    Systems Engineer
+	<span class="separator">•</span>M.Sc-->
+</p>
+<div class="social-links">
+    <a href="https://github.com/santoslopez"
+       aria-label="GitHub"
+       class="social-button github"
+       target="_blank"
+       rel="noopener noreferrer">
+        <GithubIcon/>
+        GitHub
+    </a>
+
+    <a href="/contactar"
+       aria-label="Email"
+       class="social-button gmail">
+        <GmailIcon/>
+        Contactar
+    </a>
+
+    <a href="/cv/cv-santoslopez-2026.pdf"
+       aria-label="Instagram"
+       class="social-button instagram"
+       target="_blank"
+       rel="noopener noreferrer">
+        <CvIcon/>
+    </a>
+
+    <a href="https://www.linkedin.com/in/lopezsantos"
+       aria-label="LinkedIn"
+       class="social-button linkedin"
+       target="_blank"
+       rel="noopener noreferrer">
+        <LinkedInIcon/>
+        LinkedIn
+    </a>
+</div>
+		</div>
+	</section>
+
+	<section class="intro content-width">
+		<h2>¡Hola!</h2>
+    <p>
+    Soy Santos, profesional de tecnología con pasión por el desarrollo de software.
+</p>
+
+<p>
+    Desarrollo software y aplicaciones web, y me interesa crear soluciones prácticas
+    que combinen tecnología, sistemas y resolución de problemas.
+</p>
+
+<p>
+    Completé el pensum de Ingeniería de Sistemas, Informática y Ciencias de la Computación
+    y la Maestría en Tecnologías de la Información, <em>Magna Cum Laude</em>,
+    por la Universidad Galileo. Como parte de la maestría, cursé los posgrados en Bases
+    de Datos y Sistemas de Información.
+</p>
+
+<p>
+    Actualmente me encuentro en proceso de graduación y desarrollo proyectos de software
+    mientras exploro nuevas tecnologías para la web, combinando mi experiencia en tecnología
+    con mi trabajo como asesor de ventas.
+</p>
+    </section>
+    
+</Layout>
+

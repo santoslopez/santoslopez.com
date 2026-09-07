@@ -1,0 +1,339 @@
+---
+import "../styles/index.css";
+import Layout from "../layouts/Layout.astro";
+import "../styles/certification-card.css";
+import CertificationCard from "../components/CertificationCard.astro";
+
+const tecnologias = [
+    {
+        categoria: "Lenguajes",
+        items: [
+            {
+                nombre: "C",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+            },
+            {
+                nombre: "Java",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+            },
+            {
+                nombre: "Python",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+            },
+            {
+                nombre: "PHP",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+            },
+            {
+                nombre: "JavaScript",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            }
+        ]
+    },
+    {
+        categoria: "Web",
+        items: [
+            {
+                nombre: "HTML",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+            },
+            {
+                nombre: "CSS",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+            },
+            {
+                nombre: "Bootstrap",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+            },
+            {
+                nombre: "jQuery",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg"
+            },
+            {
+                nombre: "Jekyll",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jekyll/jekyll-original.svg"
+            }
+        ]
+    },
+    {
+        categoria: "Frameworks",
+        items: [
+            {
+                nombre: "Flask",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
+            },
+            /*{
+                nombre: "Astro",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"
+            },*/
+        ]
+    },
+    {
+        categoria: "Base de datos",
+        items: [
+            {
+                nombre: "MySQL",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+            },
+            {
+                nombre: "PostgreSQL",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+            },
+            {
+                nombre: "SQLite",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
+            },
+            {
+                nombre: "SQL Server",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+            }
+        ]
+    },
+    {
+        categoria: "Herramientas",
+        items: [
+            {
+                nombre: "Git",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+            },
+            {
+                nombre: "GitHub",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+            },
+            {
+                nombre: "LaTeX",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg"
+            },
+            {
+                nombre: "Markdown",
+                icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg"
+            }
+        ]
+    },
+    {
+    categoria: "Otros",
+    items: [
+        {
+            nombre: "Apache",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg"
+        },
+        {
+            nombre: "Cisco",
+            icono: "https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/cisco.svg"
+        },
+        {
+            nombre: "Raspberry Pi Pico",
+            icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/raspberrypi/raspberrypi-original.svg"
+        }
+    ]
+},
+];
+
+// Array
+const categoriaInicial = tecnologias[0];
+
+const certificaciones = [
+            {
+        tituloCurso: "CS143 Compilers",
+        enlaceCurso: "https://online.stanford.edu/courses/soe-ycscs1-compilers",
+        descripcion: "Stanford Online",
+        expedicion: "Expedición: 28 de septiembre de 2017",
+        imagen: "/certificaciones/stanford-university.webp",
+        enlaceDiploma: "https://prod-cert-bucket.s3.amazonaws.com/downloads/e0b37b8c3ef748eda66b4501da37cb09/Statement.pdf"
+    },    
+{
+        tituloCurso: "SQL and Relational Databases 101",
+        enlaceCurso: "https://cognitiveclass.ai/courses/learn-sql-relational-databases",
+        descripcion: "Cognitive Class",
+        expedicion: "Expedición: 08 de febrero de 2025",
+        imagen: "/certificaciones/cognitiveclass.webp",
+        enlaceDiploma: "https://courses.cognitiveclass.ai/certificates/ada49eed14c042b39e07f55979775db5?trk=public_profile_certification-title"
+    },
+    {
+        tituloCurso: "Administrador de bases de datos relacionales",
+        enlaceCurso: "https://capacitateparaelempleo.org/cursos/view/100146",
+        descripcion: "Capacítate para el empleo",
+        expedicion: "Expedición: ago. 2024",
+        imagen: "/certificaciones/capacitateEmpleo-logo.webp",
+        enlaceDiploma: "https://capacitateparaelempleo.org/verifica/6f2d4470-352c-405e-ab50-e73ab240bf37/b994366e-da85-4f23-8a27-424e02c1b864"
+    },
+    {
+        tituloCurso: "Administrador de bases de datos",
+        enlaceCurso: "https://capacitateparaelempleo.org/cursos/view/69",
+        descripcion: "Capacítate para el empleo",
+        expedicion: "Expedición: ago. 2024",
+        imagen: "/certificaciones/capacitateEmpleo-logo.webp",
+        enlaceDiploma: "https://capacitateparaelempleo.org/verifica/6f2d4470-352c-405e-ab50-e73ab240bf37/ae53a96d-5e57-486b-b744-06756564a365"
+    },
+    {
+        tituloCurso: "Building Web Applications in PHP",
+        enlaceCurso: "https://www.coursera.org/learn/web-applications-php/home/module/1",
+        descripcion: "University of Michigan",
+        expedicion: "Expedición: 28 de marzo de 2021",
+        imagen: "/certificaciones/university-michigan.webp",
+        enlaceDiploma: "https://www.coursera.org/account/accomplishments/certificate/DKGTE98ZVYJF"
+    },
+]
+---
+
+<Layout TITULO_PAGINA="Tecnologías"
+META_DESCRIPTION="Conoce las tecnologías y herramientas que utiliza Santos López en el desarrollo de software, junto con sus certificaciones y formación en tecnología.">
+    <section class="intro content-width">
+        <h1>Tecnologías</h1>
+        <!--p style="color:red">Actualmente en construcción.</p-->	
+        <p>Tecnologías que utilizo.</p>
+        <div class="technology-tabs">
+            {
+                tecnologias.map((tecnologia) => (
+                    <button
+                        data-categoria={tecnologia.categoria}
+                        data-items={JSON.stringify(tecnologia.items)}
+                        class:list={{ active: tecnologia === categoriaInicial }}
+                    >
+                        {tecnologia.categoria}
+                    </button>
+                ))
+            }
+        </div>
+
+        <div class="technology-items">
+            {
+                categoriaInicial.items.map((item) => (
+                    <span>
+                        <img src={item.icono} alt={item.nombre} width="30" height="30"/>
+                        {item.nombre}
+                    </span>
+                ))
+            }
+        </div>
+        <h2>Formación y certificaciones</h2>
+        <p>Selección de cursos y certificaciones complementarios a mi formación en Ingeniería de Sistemas y Tecnologías de la Información.</p>
+        {
+    certificaciones.map((certificacion) => (
+        <CertificationCard 
+        tituloCurso={certificacion.tituloCurso}
+        enlaceCurso={certificacion.enlaceCurso}    
+        descripcion={certificacion.descripcion}
+            expedicion={certificacion.expedicion}
+            imagen={certificacion.imagen}
+            enlaceDiploma={certificacion.enlaceDiploma}
+            />
+    ))
+}
+    </section>
+</Layout>
+
+<script>
+    const botones = document.querySelectorAll<HTMLButtonElement>(
+        ".technology-tabs button"
+    );
+
+    const technologyItems = document.querySelector(".technology-items");
+
+    botones.forEach((boton) => {
+        boton.addEventListener("click", () => {
+
+            botones.forEach((boton) => {
+                boton.classList.remove("active");
+            });
+
+            boton.classList.add("active");
+
+            const items = JSON.parse(
+                boton.dataset.items ?? "[]"
+            ) as {nombre: string; icono: string} [];
+
+            if (technologyItems) {
+                technologyItems.innerHTML = "";
+
+                items.forEach((item) => {
+                    const elemento = document.createElement("span");
+
+                    const icono = document.createElement("img");
+                    icono.src = item.icono;
+                    icono.alt = item.nombre;
+                    icono.width=30;
+                    icono.height = 30;
+
+                    elemento.appendChild(icono);
+                    elemento.append(item.nombre);
+                    technologyItems.appendChild(elemento);
+                });
+            }
+        });
+    });
+</script>
+
+<style>
+    .technology-tabs {
+        display: flex;
+        gap: 2px;
+        padding: 4px;
+
+        background: rgba(128, 128, 128, 0.12);
+        border-radius: 6px;
+
+        width: fit-content;
+        max-width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        flex-wrap: nowrap;
+    }
+
+    .technology-tabs button {
+        border: none;
+        background: transparent;
+
+        color: var(--text);
+
+        padding: 7px 12px;
+        border-radius: 4px;
+
+        cursor: pointer;
+
+        font-family: inherit;
+        font-size: 14px;
+
+        transition: background-color 0.15s ease;
+
+        flex-shrink: 0;
+    }
+
+    .technology-tabs button.active {
+        background: var(--background);
+    }
+
+    .technology-items {
+        display: flex;
+        /** si ya no cabe en la misma fila
+        pasalos a la otra fila*/
+
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* =========================================================
+       SCROLL HORIZONTAL
+       ========================================================= */
+
+    .technology-tabs::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .technology-tabs::-webkit-scrollbar-track {
+        background: #e5e5e5;
+        border-radius: 4px;
+    }
+
+    .technology-tabs::-webkit-scrollbar-thumb {
+        background: #777;
+        border-radius: 4px;
+    }
+
+    .technology-tabs::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>

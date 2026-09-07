@@ -1,0 +1,311 @@
+.profile{
+	display: flex;
+	/*gap:30px;*/
+	align-items: center;
+	margin-top: 60px;
+		
+		justify-content: center;
+		/*margin-left: 300px;
+		margin-right: 300px;*/
+	}
+
+	.profile-image{
+		width:170px;
+		height: 170px;
+		border-radius: 50%;
+		object-fit: cover;
+		/**"No reduzcas esta imagen automáticamente cuando falte espacio." */
+		flex-shrink: 0;
+	}
+
+	.profile-info{
+		display: flex;
+		flex-direction: column;
+		margin-left: 80px;
+	}
+
+	.profile-info h1{
+		margin: 0;
+		/**cambia el tamaño de h1 a la par de la foto */
+		font-size:40px;
+		font-weight: 600;
+	}
+	.profile-info p{
+		margin:20px 0 12px;
+	}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+	
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 6px 9px;
+    border-radius: 6px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    font-size: 14px;
+    white-space: nowrap;
+
+    background: rgba(128, 128, 128, 0.08);
+
+    transition:
+        background-color 0.2s ease,
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.social-links a:hover {
+    background: rgba(128, 128, 128, 0.16);
+    opacity: 0.85;
+}
+	.social-links svg{
+		fill:currentColor;
+	}
+
+	.social-links .instagram-icon {
+    fill: #E1306C;
+}
+	.social-links .gmail-icon,.github-icon{
+    fill: #000;
+}
+	.social-links .github-icon{
+    fill: #000;
+}
+.social-links a.github{
+    color: #000;
+}
+
+.social-links a.gmail{
+    color: #000;
+}
+
+.social-links .linkedin-icon {
+    fill: #0A66C2;
+}
+
+.social-links a:hover{
+		opacity: 0.7;
+	}
+
+.social-links a.linkedin {
+    color: #0A66C2;
+}
+
+.social-links a.instagram{
+    color: #E1306C;
+}
+
+/**codigo css para la parte acerca de mi */
+.intro{
+	/*max-width: 750px;*/
+	line-height: 1.7;
+}
+
+.intro > * {
+    max-width: 790px;
+}
+
+.intro h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.intro h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 40px 0 10px;
+}
+
+.intro p{
+	margin: 0 0 20px;
+}
+.intro a{
+	color:var(--link);
+     text-decoration: none;
+}
+
+.intro a:hover {
+    text-decoration: underline;
+}
+
+/*aqui le cambiamos el ancho donde esta hola para que quede alineado
+con el nombre SANTOSLOPEZ el primer texto que aparece mas arriba de los nav*/
+.content-width{
+	width:min(900px, calc(100% - 40px));
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.professions {
+    margin: 0;
+}
+
+.separator {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+/* =========================================================
+   RESPONSIVE - PÁGINA PRINCIPAL
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .profile {
+        margin-top: 50px;
+    }
+
+    .profile-info {
+        margin-left: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 40px;
+
+        text-align: center;
+    }
+
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .profile-info {
+        width: 100%;
+
+        margin-left: 0;
+        margin-top: 24px;
+
+        align-items: center;
+    }
+
+
+    .profile-info h1 {
+        font-size: 32px;
+    }
+
+
+    .profile-info p {
+        margin: 16px 0 12px;
+    }
+
+
+    /*
+       Las profesiones permanecen en una sola línea.
+    */
+    .professions {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+
+    .separator {
+        margin: 0 5px;
+        font-size: 15px;
+    }
+
+
+    /*
+       Redes sociales debajo de las profesiones.
+    */
+ .social-links {
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: nowrap;
+    }
+
+    .social-links a {
+        gap: 3px;
+        font-size: 13px;
+    }
+
+
+    /*
+       Separación entre el perfil y "¡Hola!"
+    */
+    .intro {
+        margin-top: 45px;
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .profile {
+        margin-top: 30px;
+    }
+
+
+    .profile-image {
+        width: 135px;
+        height: 135px;
+    }
+
+
+    .profile-info {
+        margin-top: 20px;
+    }
+
+
+    .profile-info h1 {
+        font-size: 29px;
+    }
+
+
+    .professions {
+        font-size: 13px;
+    }
+
+    .separator {
+        margin: 0 3px;
+        font-size: 14px;
+    }
+
+    .social-links {
+        gap: 4px;
+    }
+
+    .social-links a {
+        gap: 2px;
+        font-size: 12px;
+    }
+}

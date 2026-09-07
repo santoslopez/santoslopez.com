@@ -1,0 +1,230 @@
+/* =========================================================
+   PROYECTO
+   ========================================================= */
+
+.project {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+
+/* =========================================================
+   IMAGEN
+   ========================================================= */
+
+.project-image {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+.project-info {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.project-info h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.project-info h2 a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.project-info h2 a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FECHA Y DESCRIPCIÓN
+   ========================================================= */
+
+.project-info p {
+    margin: 0 0 8px;
+    line-height: 1.6;
+}
+
+.project-date {
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.project-description {
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TECNOLOGÍAS
+   ========================================================= */
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin: 12px 0;
+}
+
+
+/* =========================================================
+   TECNOLOGÍA INDIVIDUAL
+   ========================================================= */
+
+.project-technology {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 14px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ICONO DE TECNOLOGÍA
+   ========================================================= */
+
+.project-technology img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   GITHUB
+   ========================================================= */
+
+.project-info > a,
+.project-info > button,
+.project-links > a,
+.project-links > button  {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 6px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    background: rgba(128, 128, 128, 0.08);
+}
+
+
+/* =========================================================
+   GITHUB ACTIVO
+   ========================================================= */
+
+.github-link {
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.github-link:hover {
+    background: rgba(128, 128, 128, 0.16);
+    border-color: rgba(128, 128, 128, 0.35);
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   GITHUB DESHABILITADO
+   ========================================================= */
+
+.project-info > button.github-disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   ICONO GITHUB
+   ========================================================= */
+
+.project-info > a svg,
+.project-info > button svg {
+    fill: currentColor;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) and (orientation: portrait) {
+
+    .project {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .project-info {
+        width: 100%;
+    }
+
+    .project-info h2 {
+        font-size: 17px;
+    }
+
+    .project-info p {
+        font-size: 14px;
+    }
+
+    .project-technologies {
+        gap: 7px 10px;
+    }
+
+    .project-technology {
+        font-size: 13px;
+    }
+
+    .project-technology img {
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+/*necesario para que los botones aparezca uno a la par del otro, github
+y mas*/
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

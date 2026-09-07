@@ -1,0 +1,66 @@
+---
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import { Image } from "astro:assets"; 
+
+const {
+    id,
+    tituloTema,
+    fechaPublicacion,
+    descripcionPrevia,
+    imagenPrevia,
+    tecnologias = [],
+    enlace,
+    mostrarEnlaceGitHub
+} = Astro.props;
+---
+<article class="project">
+    <Image src={imagenPrevia} alt={tituloTema} class="project-image"/>
+    <div class="project-info">
+        <h2><a href={`/software/${id}`}>{tituloTema}</a></h2>
+        <!-- EL CSS para la fecha de publicacion aun se conserva -->
+         <!--p class="project-date">{ fechaPublicacion.toLocaleDateString("es-GT",
+            {
+                day: "2-digit",
+                month: "long",
+                year: "numeric"
+            }
+         )}</p-->           
+        <p>{descripcionPrevia}</p>
+        
+        {
+           
+        tecnologias.length > 0 && (
+            <>
+            <p><strong>Tecnologías:</strong></p>
+        <div class="project-technologies">
+            {
+                tecnologias.map((tecnologia: any) => (
+                    <span class="project-technology">
+                        <img src={tecnologia.icono} alt={tituloTema}/>
+                    </span>
+                ))
+            }
+        </div>
+        </>
+        )
+        }
+<div class="project-links">
+    {
+        mostrarEnlaceGitHub ? (
+            <a href={enlace} target="_blank" rel="noopener noreferrer">
+                <GitHubIcon/>
+                GitHub
+            </a>
+        ) : (
+            <button class="github-disabled" disabled>
+                <GitHubIcon />
+                Código privado
+            </button>
+        )
+    }
+
+    <a href={`/software/${id}`}>Leer más</a>
+</div>
+        
+    </div>
+</article>

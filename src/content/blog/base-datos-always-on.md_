@@ -1,0 +1,28 @@
+---
+tituloTema: "Base de datos de alta disponibilidad (always on)"
+fechaPublicacion: 2024-12-19
+descripcionPrevia: "Proyecto final para el postgrado de base de datos. Configuración de base de datos de alta disponibilidad (Always ON)"
+imagenPrevia: "./img/paginacion-jekyll/7.webp"
+---
+
+# Documentación del proyecto
+
+## 01 — Configuración de las máquinas virtuales
+     Breve descripción...
+     [Ver PDF]
+## 02 — Configuración de SQL Server
+     Breve descripción...
+     [Ver PDF]
+## 03 — Configuración de Always On
+     Breve descripción...
+     [Ver PDF]
+
+## 04 — Configuración de red
+     Breve descripción...
+     [Ver PDF]
+
+## 05 — Pruebas de alta disponibilidad
+     Breve descripción...
+     [Ver PDF]
+
+# https://github.com/santoslopez/basedatos-always-on
