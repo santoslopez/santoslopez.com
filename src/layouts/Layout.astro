@@ -39,6 +39,20 @@ import "../styles/layout.css";
     <link rel="apple-touch-icon" sizes="180x180" href="profile/apple-touch-icon-180x180.png"/>
     <link rel="icon" type="image/png" href="/favicon.png" />
 
+<!-- Google tag (gtag.js) 
+is:inline Deja este script exactamente como está, no lo optimices, 
+no lo muevas de lugar 
+y no lo metas en un paquete de JavaScript global" 
+-->
+<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-YN6NYBTQV6"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YN6NYBTQV6');
+</script>
+
     </head>
 
     <body>
